@@ -1,0 +1,106 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
+
+```{r}
+library(tidyverse)
+library(tibble)
+library(superheat)
+#setwd("/Users/benjaminchang/Desktop/CS 271/TileMap")
+setwd("~/Desktop/Harvard/senior/cs271/Project/TileMap")
+res_raw <- read.csv("E-GEOD-3307-A-AFFY-33-query-results.csv")
+res_top <- res_raw[1:11950,] %>% select_if(~ !all(is.na(.)))
+res_bot <- res_raw[11951:21749,] %>% select_if(~ !all(is.na(.)))
+res <- merge(res_top, res_bot, by = "Gene.Name", all=TRUE) %>% mutate(geneid = coalesce(Gene.ID.x, Gene.ID.y)) %>% select(-Gene.ID.x, -Gene.ID.y, -Design.Element.x, -Design.Element.y)
+res <- res[!duplicated(res$Gene.Name), ] 
+rownames(res) <- res$Gene.Name
+#exp_design <- read.csv("E-GEOD-3307-experiment-design.tsv", sep="\t")
+```
+
+```{r}
+conditions <- sub(pattern = "^X.(\\w+(\\.{1}\\w{2}?)?).+$", replacement = "\\1", x = colnames(res)[2:74]) %>% unique()
+conditions
+```
+
+```{r}
+geneList <- res$Gene.Name %>% unique()
+```
+
+```{r}
+colnames(res) <- sub(pattern = "^X.(\\w+(\\.{1}\\w{2}?)?).+([AB])\\.{2}(\\w+)$", replacement = "\\1_\\3_\\4", x = colnames(res))
+```
+
+```{r}
+fc <- res %>% select(contains("foldChange"))
+colnames(fc) <- sub(pattern = "^(.+)_foldChange$", replacement = "\\1", x = colnames(fc))
+pval <- res %>% select(contains("pValue"))
+colnames(pval) <- sub(pattern = "^(.+)_pValue$", replacement = "\\1", x = colnames(pval))
+
+# just visualize something for now
+superheat(t(fc[1:101,]),heat.na.col = "white")
+```
+
+```{r}
+fc_sample <- sample_n(fc[rowSums(!is.na(fc)) > 15, ], 50)
+```
+
+```{r}
+fc_sample_pivot <- pivot_longer(rownames_to_column(data.frame(t(fc_sample)), var = "condition"), cols = !condition, names_to = "gene", values_to = "fold") %>% 
+  mutate(val = as.integer(fold > 0) * 2 - 1) %>%
+  mutate(fold_cat = case_when(
+    fold < -2 ~ -2,
+    fold <= -1 ~ -1.5,
+    fold <= -0.25 ~ -0.75,
+    fold <= 0 ~ -0.25,
+    fold <= 0.25 ~ 0.25,
+    fold <= 1 ~ 0.75,
+    fold <= 2 ~ 1.5,
+    fold > 2 ~ 2,
+  ))
+head(fc_sample_pivot)
+```
+
+```{r}
+#fc_agg <- data.frame(upreg = colSums(fc_sample > 0, na.rm=TRUE), downreg = -colSums(fc_sample < 0, na.rm=TRUE))
+#fc_agg <- fc_agg %>% rownames_to_column("condition") %>% gather("key", "value", -condition)
+#ggplot(data = fc_agg, aes(y = condition, x = value, fill=key)) + geom_col()
+```
+
+```{r echo=TRUE, fig.height=4, fig.width=8, warning=FALSE, paged.print=FALSE}
+
+fold_cat_colors <- c("-2" = "#103D80",
+                     "-1.5" = "#3A7EBD",
+                     "-0.75" = "#6FA5CC",
+                     "-0.25" = "#D7EBF9",
+                     "0.25" = "#FFF8E0",
+                     "0.75" = "#ffe396",
+                     "1.5" = "#E16D54",
+                     "2" = "#AA1B1B")
+
+fc_sample_pivot$fold_cat <- factor(fc_sample_pivot$fold_cat, levels = c("-2", "-1.5", "-0.75", "-0.25", "2", "1.5", "0.75", "0.25"))
+fc_sample_pivot <- fc_sample_pivot[order(abs(fc_sample_pivot$fold), decreasing = FALSE),]
+
+ggplot(data = fc_sample_pivot, aes(y=condition, x=val, fill=as.factor(fold_cat))) +
+  geom_col(position="stack",alpha=1,color='black',linewidth=0.2) + 
+  geom_vline(xintercept=0, size=1)+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background=element_blank()) +
+  scale_fill_manual(values=fold_cat_colors, name="Fold Change", breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2"))
+
+```
+
+```{r}
+superheat(t(fc_sample),heat.na.col = "white",
+          pretty.order.cols = TRUE,
+          scale=TRUE,
+          left.label.size = 0.2,
+          left.label.text.size = 3,
+          bottom.label.text.size = 3,
+          bottom.label.size = 0.4,
+          bottom.label.text.angle = 90,
+          heat.pal = c("blue", "white", "red"))
+```
