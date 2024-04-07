@@ -13,51 +13,28 @@ library(tibble)
 library(superheat)
 #setwd("/Users/benjaminchang/Desktop/CS 271/TileMap")
 setwd("~/Desktop/Harvard/senior/cs271/Project/TileMap")
-res_raw <- read.csv("E-GEOD-3307-A-AFFY-33-query-results.csv")
-res_top <- res_raw[1:11950,] %>% select_if(~ !all(is.na(.)))
-res_bot <- res_raw[11951:21749,] %>% select_if(~ !all(is.na(.)))
-res <- merge(res_top, res_bot, by = "Gene.Name", all=TRUE) %>% mutate(geneid = coalesce(Gene.ID.x, Gene.ID.y)) %>% select(-Gene.ID.x, -Gene.ID.y, -Design.Element.x, -Design.Element.y)
-res <- res[!duplicated(res$Gene.Name), ] 
-rownames(res) <- res$Gene.Name
-#exp_design <- read.csv("E-GEOD-3307-experiment-design.tsv", sep="\t")
+res_raw <- read.csv("41586_2024_7224_MOESM15_ESM.csv")[1:52,]
 ```
 
 ```{r}
-conditions <- sub(pattern = "^X.(\\w+(\\.{1}\\w{2}?)?).+$", replacement = "\\1", x = colnames(res)[2:74]) %>% unique()
-conditions
+res_raw
+```
+```{r}
+n <- res_raw$Gene.name
+
+res <- as.data.frame(t(res_raw[,-1])) - 1
+colnames(res) <- n
+
+#data.frame(t(res_raw),header=TRUE)
+
 ```
 
 ```{r}
-geneList <- res$Gene.Name %>% unique()
+write.csv(res, "datasets/protein_degredation.csv")
 ```
 
 ```{r}
-colnames(res) <- sub(pattern = "^X.(\\w+(\\.{1}\\w{2}?)?).+([AB])\\.{2}(\\w+)$", replacement = "\\1_\\3_\\4", x = colnames(res))
-```
-
-```{r}
-fc <- res %>% select(contains("foldChange"))
-colnames(fc) <- sub(pattern = "^(.+)_foldChange$", replacement = "\\1", x = colnames(fc))
-pval <- res %>% select(contains("pValue"))
-colnames(pval) <- sub(pattern = "^(.+)_pValue$", replacement = "\\1", x = colnames(pval))
-
-# just visualize something for now
-superheat(t(fc[1:101,]),heat.na.col = "white")
-```
-
-```{r}
-fc_sample <- sample_n(fc[rowSums(!is.na(fc)) > 15, ], 50)
-
-res <- data.frame(t(fc_sample))
-```
-
-```{r}
-#write.csv(res, "datasets/muscle.csv")
-```
-
-
-```{r}
-fc_sample_pivot <- pivot_longer(rownames_to_column(res, var = "condition"), cols = !condition, names_to = "gene", values_to = "fold") %>% 
+fc_sample_pivot <- pivot_longer(rownames_to_column(res, var="condition"), cols = !condition, names_to = "gene", values_to = "fold") %>% 
   mutate(val = as.integer(fold > 0) * 2 - 1) %>%
   mutate(fold_cat = case_when(
     fold < -2 ~ -2,

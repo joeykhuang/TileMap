@@ -39,7 +39,7 @@ function(input, output, session) {
         )) %>%
         mutate(fold_cat = factor(fold_cat,  levels = c("-2", "-1.5", "-0.75", "-0.25", "2", "1.5", "0.75", "0.25")))})
     
-    whichplot <- reactiveVal(FALSE)
+    whichplot <- reactiveVal(TRUE)
     observeEvent(input$button, {
       whichplot(!whichplot())
     })
@@ -47,8 +47,9 @@ function(input, output, session) {
     output$tilePlot <- renderPlotly({   
       if (whichplot()) {
         highlight(ggplotly(ggplot(data = highlight_key(fc_sample_pivot(), ~gene), 
-                                        aes(x=fct_reorder(gene, val), y=val, fill=fold_cat, text=condition)) +
+                                        aes(y=fct_reorder(condition, val), x=val, fill=fold_cat, text=gene)) +
                                    geom_col(position="stack",alpha=1,color='black',linewidth=0.2) +
+                                   #geom_text(aes(label = gene), position = position_stack(vjust = .5), size=3) +
                                    geom_hline(yintercept=0, size=1) +
                                    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background=element_blank(),
                                          axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
