@@ -1,25 +1,1201 @@
-"","NF1","UEVLD","CDC37L1","HOXD10","NNT","HUWE1","GJA5","SPCS3","DOT1L","ATP6V0E1","XAF1","MAFG","AAK1","TM2D3","SSR3","ZNF281","JAM2","CDC23","PLN","PGP","HYI","IMPACT","C2orf49","HDAC11","CCN4","MKLN1","GPRC5B","RPS6KB1","PSMA3","JARID2","ODF2","MON2","PDLIM2","WAC","FLCN","ATF6","TRAFD1","BICD1","ANP32A","KDSR","FBXO9","UBQLN2","ZFX","CPLX2","CLPX","SGCB","SEMA5A","PTPRB","TMEM33","SMC1A"
-"ALS_A",0.7,0.2,0.7,-0.1,-0.1,0.5,NA,0.6,-0.2,NA,-0.2,-0.8,NA,0.5,0.1,-0.3,0.2,0.5,-0.6,-0.2,-0.2,0.3,0.2,-0.3,-0.3,0.1,0.3,0.3,0.6,-0.1,-0.3,0.3,-0.4,0.7,NA,-0.1,NA,-0.2,0.6,NA,0.3,1.1,NA,-0.3,0.3,0.2,-0.2,NA,0.4,0.4
-"AQM_A",0.6,0.3,0.5,-0.6,-0.6,0.8,-0.1,0.5,-0.4,0.5,-0.2,NA,0.7,0.9,NA,-0.2,-0.1,0.6,-2,-0.4,-0.1,0.4,-0.1,-0.5,-0.3,0.7,0.1,0.7,0.6,-0.2,-0.1,0.7,-1.1,0.8,0.2,0.2,-0.1,-0.3,0.5,0.3,NA,0.7,-0.1,-0.3,0.3,0.3,-0.4,-0.6,0.6,2.5
-"BMD_A",0.1,-0.1,NA,0.1,-0.2,0.1,NA,0.6,0.1,0.4,-0.1,-0.2,0.2,0.1,NA,-0.2,0.3,0.1,-0.7,0.2,NA,NA,-0.2,NA,-0.3,NA,NA,-0.2,-0.2,0.2,-0.1,-0.4,-0.5,-0.1,NA,NA,0.2,NA,0.1,-0.4,NA,0.1,-0.2,0.1,-0.1,-0.1,-0.1,0.2,-0.2,NA
-"DMD_A",0.3,-0.1,-0.3,-0.2,-0.4,0.1,-0.1,0.6,-0.2,0.4,0.1,-0.5,0.1,0.1,-0.1,-0.2,1,0.5,-0.6,-0.2,-0.1,0.3,-0.2,-0.3,-0.4,-0.1,NA,-0.1,-0.1,0.1,-0.3,0.3,-0.8,0.5,0.1,NA,0.2,-0.1,0.3,0.2,0.3,0.1,-0.4,-0.2,-0.3,-0.2,-0.3,0.3,0.1,0.5
-"EDMD.AD_A",0.7,-0.2,0.6,-0.4,-0.3,0.4,NA,0.5,-0.2,0.5,-0.2,-0.3,0.2,0.6,-0.4,-0.3,0.5,0.6,-0.5,-0.2,-0.1,0.3,-0.1,-0.3,-0.4,0.2,0.2,NA,0.3,0.1,-0.2,0.4,-0.6,1,0.1,NA,NA,-0.2,0.5,0.2,-0.1,0.7,-0.4,-0.3,0.3,-0.3,-0.1,-0.3,0.2,0.9
-"EDMD.XR_A",0.2,NA,0.6,NA,-0.1,0.3,NA,0.4,NA,0.4,NA,-0.3,NA,0.4,NA,NA,NA,0.3,-0.3,-0.1,0.1,NA,NA,NA,NA,NA,0.1,0.1,0.1,NA,-0.2,NA,-0.6,0.5,NA,NA,NA,NA,0.5,0.2,0.2,0.3,NA,NA,NA,-0.2,NA,-0.4,0.3,0.1
-"FSHD_A",0.1,0.1,-0.1,-0.2,NA,0.3,-0.1,0.4,NA,0.2,0.1,0.3,0.3,0.6,-0.1,0.3,0.2,0.3,-0.1,-0.1,-0.1,0.2,-0.1,-0.2,-0.2,NA,0.4,0.4,0.3,-0.1,-0.1,0.2,-0.1,0.2,0.1,NA,NA,-0.2,0.3,0.4,0.1,0.9,-0.2,-0.3,0.3,0.3,-0.3,0.1,0.3,0.7
-"HSP_A",-0.6,-0.3,-0.9,0.2,-1.8,0.1,0.4,-0.5,0.2,-0.2,-0.1,0.3,-0.1,-0.3,-0.4,-0.3,NA,NA,-0.8,0.3,0.5,NA,-0.3,NA,NA,NA,0.3,-0.3,-1,NA,0.3,-0.3,0.6,-0.4,NA,NA,NA,NA,-0.3,-0.4,-0.5,-0.6,-0.3,0.2,-0.4,-0.1,NA,-0.5,-0.3,-0.4
-"JDM_A",0.3,0.2,0.6,-0.3,-1,0.2,-0.2,0.7,-0.4,0.5,3.1,0.2,0.6,0.8,-0.1,0.3,0.4,1,-0.5,-0.3,-0.3,0.3,NA,-0.4,-0.5,0.3,NA,0.6,0.6,0.1,-0.4,0.6,-0.4,0.9,0.4,0.1,0.6,-0.3,0.5,0.6,0.3,0.9,-0.2,-0.4,0.3,0.2,-0.4,0.1,0.5,1.6
-"LGMD2A_A",0.1,-0.2,-0.4,-0.1,-0.8,0.1,NA,0.2,-0.1,0.2,NA,-0.1,NA,-0.1,-0.3,-0.2,0.4,0.1,-0.9,0.1,0.2,NA,-0.3,NA,-0.2,-0.2,NA,-0.2,-0.2,0.1,NA,-0.2,-0.7,0.1,-0.1,NA,NA,NA,0.1,-0.1,NA,-0.3,-0.3,NA,-0.3,-0.1,NA,-0.3,-0.2,0.1
-"LGMD2B_A",0.1,-0.2,-0.2,0.1,-0.8,0.1,NA,0.3,NA,0.1,NA,-0.2,0.2,-0.1,-0.3,-0.4,0.1,0.1,-0.9,0.1,0.1,-0.1,-0.2,NA,-0.2,-0.1,-0.3,-0.2,-0.4,0.1,-0.1,-0.1,-0.8,-0.2,NA,-0.1,0.2,NA,-0.2,-0.4,NA,-0.2,-0.4,0.2,-0.3,-0.1,-0.1,-0.2,-0.3,NA
-"LGMD2I_A",0.1,-0.2,0.2,0.1,-0.3,0.1,NA,0.3,0.2,0.2,0.1,-0.3,0.1,NA,-0.1,-0.2,0.1,0.1,-0.1,0.2,0.2,-0.1,-0.3,NA,-0.2,-0.2,NA,-0.2,0.2,-0.1,-0.1,-0.3,-0.4,-0.1,NA,NA,0.3,0.1,NA,-0.4,NA,-0.2,-0.3,0.1,-0.1,-0.2,NA,0.1,-0.3,0.1
-"ALS_B",0.1,0.1,0.5,-0.1,NA,0.1,-0.3,-0.1,0.2,0.4,0.1,-0.3,0.4,0.3,0.3,0.4,0.2,0.1,-0.5,-0.1,-0.1,0.2,0.3,-0.6,-0.2,0.6,0.3,0.6,-0.1,-0.3,0.3,NA,-0.1,0.5,-0.2,0.4,-0.2,0.9,-0.2,0.3,0.1,0.3,0.5,-0.3,0.4,0.5,NA,0.3,0.7,0.1
-"AQM_B",-0.1,0.2,0.2,NA,-0.5,0.2,-0.2,0.4,NA,0.8,0.1,NA,0.9,NA,0.7,0.4,-0.1,0.2,-1.3,-0.7,-0.1,0.6,0.4,-0.6,-0.3,1.1,-0.3,0.8,-0.2,-0.3,0.6,-0.2,-0.1,1,0.1,0.4,-0.1,0.2,NA,0.6,-0.3,0.2,0.5,NA,0.2,0.2,-0.2,NA,0.8,0.1
-"BMD_B",NA,0.1,0.2,-0.2,-0.8,NA,0.3,0.2,0.1,0.5,-0.1,0.2,0.5,0.1,0.1,-0.1,0.3,NA,-1.1,-0.4,0.1,-0.1,-0.2,-0.2,-0.1,-0.4,0.3,-0.3,-0.2,-0.1,0.2,NA,0.1,-0.1,-0.1,0.4,-0.2,0.7,0.1,0.3,NA,NA,-0.1,NA,-0.2,NA,-0.1,0.2,0.2,-0.2
-"DMD_B",0.1,0.1,-0.4,-0.1,-0.6,NA,0.1,0.2,NA,0.6,0.7,-0.2,0.4,NA,0.4,NA,1.1,0.2,-0.7,-0.9,-0.1,0.1,NA,-0.3,NA,0.2,NA,0.1,-0.2,-0.3,0.4,NA,-0.1,0.5,-0.1,0.5,-0.2,0.5,NA,0.6,0.1,0.1,NA,-0.1,-0.2,-0.2,0.1,0.3,0.4,-0.1
-"EDMD.AD_B",0.2,0.1,0.4,-0.1,-0.2,NA,-0.1,NA,0.2,0.8,0.3,-0.3,0.5,NA,0.3,0.2,0.7,0.4,-0.6,-0.7,NA,NA,0.1,-0.5,NA,0.6,-0.3,0.3,0.1,-0.2,0.4,NA,-0.2,0.6,-0.2,0.5,0.1,0.7,-0.1,0.8,NA,NA,0.3,-0.2,NA,-0.1,0.2,0.3,0.6,NA
-"EDMD.XR_B",NA,NA,0.6,NA,0.2,NA,-0.2,0.2,NA,0.5,0.1,NA,0.5,0.3,NA,0.3,NA,NA,NA,-0.1,-0.2,-0.1,0.2,-0.1,NA,0.3,0.1,0.2,NA,-0.3,NA,NA,-0.2,0.2,-0.2,0.4,NA,0.6,-0.2,0.2,0.2,NA,0.2,NA,0.2,0.1,NA,-0.1,0.4,NA
-"FSHD_B",NA,0.5,0.4,-0.1,0.3,0.1,-0.2,NA,0.4,0.7,0.5,-0.2,0.6,0.2,0.5,0.4,0.6,0.1,0.2,0.1,NA,0.2,0.6,NA,-0.3,0.6,0.4,0.5,NA,-0.1,0.1,-0.1,-0.1,0.8,-0.2,0.5,-0.1,0.4,NA,0.9,-0.1,0.3,0.4,-0.2,0.2,0.3,-0.1,0.6,0.4,-0.1
-"HSP_B",NA,NA,-0.8,NA,-0.8,NA,0.3,NA,NA,-0.4,-0.3,0.4,-0.1,-0.2,-0.4,-0.2,-0.4,NA,-0.7,0.3,0.5,-0.6,0.1,0.6,NA,-0.7,-0.1,-0.8,NA,-0.1,NA,NA,NA,-0.4,0.3,-0.2,NA,-0.3,0.3,-0.2,-0.3,NA,-0.2,NA,-0.3,-0.1,NA,-0.5,-0.3,NA
-"JDM_B",0.1,0.3,0.5,NA,-0.3,0.1,-0.3,0.6,0.8,0.9,3.4,-0.4,0.7,-0.3,0.9,0.8,0.8,0.3,-0.3,-0.2,-0.2,0.4,0.6,-0.2,-0.3,0.9,NA,0.8,-0.1,-0.2,0.4,-0.1,-0.2,1.3,NA,0.7,0.2,NA,-0.1,0.8,-0.2,0.3,0.8,-0.3,0.2,0.1,-0.1,0.8,0.6,-0.1
-"LGMD2A_B",NA,-0.1,-0.2,NA,-0.8,NA,0.2,NA,NA,0.1,0.2,0.1,0.2,NA,0.1,-0.1,0.4,NA,-1.1,-0.5,0.2,-0.1,-0.1,-0.3,-0.1,NA,0.1,-0.2,0.1,-0.1,0.3,-0.1,NA,0.1,-0.1,0.3,-0.1,0.3,0.1,0.3,-0.3,NA,-0.1,NA,-0.3,NA,-0.1,-0.1,0.2,-0.1
-"LGMD2B_B",NA,NA,-0.1,NA,-0.8,NA,0.5,0.2,-0.1,0.2,0.1,0.3,0.3,NA,0.2,-0.1,0.2,NA,-1.1,-0.4,NA,-0.2,-0.4,NA,-0.1,-0.2,NA,-0.3,NA,-0.2,0.2,NA,NA,-0.2,-0.1,0.1,-0.3,0.1,0.1,NA,-0.2,NA,-0.1,0.2,-0.3,-0.3,-0.2,-0.3,0.1,NA
-"LGMD2I_B",NA,0.1,-0.1,-0.1,-0.6,NA,0.3,0.2,-0.1,0.1,0.1,0.2,0.4,NA,NA,-0.3,NA,NA,-0.3,-0.4,0.2,-0.1,-0.2,-0.1,NA,NA,0.1,-0.2,-0.1,-0.2,0.2,-0.2,0.1,0.1,-0.1,0.2,-0.2,0.3,NA,0.1,-0.2,-0.2,NA,0.2,-0.3,-0.1,-0.2,0.1,0.1,-0.2
+,condition,gene,fold,percent,pathway,cell type
+1,ALS_A,NF1,0.7,36,"pyruvate metabolism, cancer pathways",smooth
+2,ALS_A,UEVLD,0.2,96,"Wnt signalling, apoptosis",skeletal
+3,ALS_A,CDC37L1,0.7,89,"cancer pathways, fatty acid degradation",skeletal
+4,ALS_A,HOXD10,-0.1,54,"pyruvate metabolism, Wnt signalling",cardiac
+5,ALS_A,NNT,-0.1,33,"apoptosis, propanoate metabolism",smooth
+6,ALS_A,HUWE1,0.5,54,"Wnt signalling, propanoate metabolism",cardiac
+7,ALS_A,GJA5,NA,58,"propanoate metabolism, propanoate metabolism",skeletal
+8,ALS_A,SPCS3,0.6,14,"Wnt signalling, pyruvate metabolism",cardiac
+9,ALS_A,DOT1L,-0.2,37,"Wnt signalling, apoptosis",skeletal
+10,ALS_A,ATP6V0E1,NA,27,"Wnt signalling, citrate cycle",cardiac
+11,ALS_A,XAF1,-0.2,100,"cancer pathways, apoptosis",cardiac
+12,ALS_A,MAFG,-0.8,64,"MAPK, pyruvate metabolism",smooth
+13,ALS_A,AAK1,NA,3,"MAPK, propanoate metabolism",cardiac
+14,ALS_A,TM2D3,0.5,36,"Wnt signalling, cancer pathways",skeletal
+15,ALS_A,SSR3,0.1,18,"focal adhesion, propanoate metabolism",cardiac
+16,ALS_A,ZNF281,-0.3,36,"propanoate metabolism, fatty acid degradation",skeletal
+17,ALS_A,JAM2,0.2,56,"synthesis and degradation of ketone bodies, pyruvate metabolism",skeletal
+18,ALS_A,CDC23,0.5,47,"MAPK, pyruvate metabolism",smooth
+19,ALS_A,PLN,-0.6,67,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+20,ALS_A,PGP,-0.2,89,"citrate cycle, apoptosis",skeletal
+21,ALS_A,HYI,-0.2,12,"citrate cycle, apoptosis",cardiac
+22,ALS_A,IMPACT,0.3,89,"apoptosis, apoptosis",smooth
+23,ALS_A,C2orf49,0.2,9,"cancer pathways, focal adhesion",skeletal
+24,ALS_A,HDAC11,-0.3,85,"pyruvate metabolism, cancer pathways",skeletal
+25,ALS_A,CCN4,-0.3,68,"Wnt signalling, MAPK",skeletal
+26,ALS_A,MKLN1,0.1,86,"synthesis and degradation of ketone bodies, apoptosis",smooth
+27,ALS_A,GPRC5B,0.3,4,"fatty acid degradation, fatty acid degradation",skeletal
+28,ALS_A,RPS6KB1,0.3,48,"pyruvate metabolism, apoptosis",smooth
+29,ALS_A,PSMA3,0.6,70,"cancer pathways, pyruvate metabolism",skeletal
+30,ALS_A,JARID2,-0.1,92,"fatty acid degradation, cancer pathways",skeletal
+31,ALS_A,ODF2,-0.3,76,"pyruvate metabolism, fatty acid degradation",smooth
+32,ALS_A,MON2,0.3,69,"Wnt signalling, pyruvate metabolism",smooth
+33,ALS_A,PDLIM2,-0.4,1,"cancer pathways, MAPK",skeletal
+34,ALS_A,WAC,0.7,19,"fatty acid degradation, citrate cycle",skeletal
+35,ALS_A,FLCN,NA,3,"synthesis and degradation of ketone bodies, Wnt signalling",smooth
+36,ALS_A,ATF6,-0.1,94,"propanoate metabolism, fatty acid degradation",smooth
+37,ALS_A,TRAFD1,NA,28,"fatty acid degradation, pyruvate metabolism",cardiac
+38,ALS_A,BICD1,-0.2,51,"apoptosis, focal adhesion",skeletal
+39,ALS_A,ANP32A,0.6,12,"Wnt signalling, Wnt signalling",smooth
+40,ALS_A,KDSR,NA,52,"MAPK, MAPK",smooth
+41,ALS_A,FBXO9,0.3,80,"propanoate metabolism, Wnt signalling",smooth
+42,ALS_A,UBQLN2,1.1,28,"synthesis and degradation of ketone bodies, propanoate metabolism",cardiac
+43,ALS_A,ZFX,NA,94,"cancer pathways, focal adhesion",skeletal
+44,ALS_A,CPLX2,-0.3,69,"apoptosis, propanoate metabolism",skeletal
+45,ALS_A,CLPX,0.3,3,"cancer pathways, fatty acid degradation",cardiac
+46,ALS_A,SGCB,0.2,37,"propanoate metabolism, cancer pathways",cardiac
+47,ALS_A,SEMA5A,-0.2,42,"cancer pathways, apoptosis",cardiac
+48,ALS_A,PTPRB,NA,74,"focal adhesion, Wnt signalling",smooth
+49,ALS_A,TMEM33,0.4,97,"pyruvate metabolism, MAPK",smooth
+50,ALS_A,SMC1A,0.4,28,"MAPK, pyruvate metabolism",cardiac
+51,AQM_A,NF1,0.6,75,"citrate cycle, propanoate metabolism",smooth
+52,AQM_A,UEVLD,0.3,61,"focal adhesion, fatty acid degradation",skeletal
+53,AQM_A,CDC37L1,0.5,21,"focal adhesion, focal adhesion",cardiac
+54,AQM_A,HOXD10,-0.6,51,"synthesis and degradation of ketone bodies, propanoate metabolism",cardiac
+55,AQM_A,NNT,-0.6,82,"focal adhesion, fatty acid degradation",cardiac
+56,AQM_A,HUWE1,0.8,70,"citrate cycle, MAPK",cardiac
+57,AQM_A,GJA5,-0.1,80,"MAPK, synthesis and degradation of ketone bodies",skeletal
+58,AQM_A,SPCS3,0.5,13,"apoptosis, focal adhesion",smooth
+59,AQM_A,DOT1L,-0.4,31,"apoptosis, Wnt signalling",smooth
+60,AQM_A,ATP6V0E1,0.5,94,"apoptosis, propanoate metabolism",cardiac
+61,AQM_A,XAF1,-0.2,76,"fatty acid degradation, pyruvate metabolism",skeletal
+62,AQM_A,MAFG,NA,31,"propanoate metabolism, pyruvate metabolism",skeletal
+63,AQM_A,AAK1,0.7,98,"focal adhesion, focal adhesion",skeletal
+64,AQM_A,TM2D3,0.9,7,"apoptosis, propanoate metabolism",skeletal
+65,AQM_A,SSR3,NA,8,"fatty acid degradation, citrate cycle",cardiac
+66,AQM_A,ZNF281,-0.2,19,"Wnt signalling, synthesis and degradation of ketone bodies",skeletal
+67,AQM_A,JAM2,-0.1,19,"propanoate metabolism, cancer pathways",cardiac
+68,AQM_A,CDC23,0.6,64,"apoptosis, apoptosis",smooth
+69,AQM_A,PLN,-2,87,"apoptosis, propanoate metabolism",skeletal
+70,AQM_A,PGP,-0.4,74,"fatty acid degradation, synthesis and degradation of ketone bodies",smooth
+71,AQM_A,HYI,-0.1,49,"MAPK, focal adhesion",skeletal
+72,AQM_A,IMPACT,0.4,44,"citrate cycle, fatty acid degradation",skeletal
+73,AQM_A,C2orf49,-0.1,37,"citrate cycle, citrate cycle",skeletal
+74,AQM_A,HDAC11,-0.5,78,"fatty acid degradation, Wnt signalling",smooth
+75,AQM_A,CCN4,-0.3,24,"cancer pathways, apoptosis",cardiac
+76,AQM_A,MKLN1,0.7,75,"apoptosis, apoptosis",smooth
+77,AQM_A,GPRC5B,0.1,48,"focal adhesion, cancer pathways",skeletal
+78,AQM_A,RPS6KB1,0.7,7,"synthesis and degradation of ketone bodies, propanoate metabolism",smooth
+79,AQM_A,PSMA3,0.6,66,"MAPK, fatty acid degradation",smooth
+80,AQM_A,JARID2,-0.2,76,"propanoate metabolism, apoptosis",skeletal
+81,AQM_A,ODF2,-0.1,98,"Wnt signalling, Wnt signalling",smooth
+82,AQM_A,MON2,0.7,26,"cancer pathways, cancer pathways",cardiac
+83,AQM_A,PDLIM2,-1.1,57,"pyruvate metabolism, synthesis and degradation of ketone bodies",skeletal
+84,AQM_A,WAC,0.8,85,"propanoate metabolism, cancer pathways",smooth
+85,AQM_A,FLCN,0.2,100,"fatty acid degradation, propanoate metabolism",cardiac
+86,AQM_A,ATF6,0.2,31,"Wnt signalling, cancer pathways",cardiac
+87,AQM_A,TRAFD1,-0.1,13,"fatty acid degradation, Wnt signalling",smooth
+88,AQM_A,BICD1,-0.3,57,"focal adhesion, citrate cycle",skeletal
+89,AQM_A,ANP32A,0.5,53,"cancer pathways, MAPK",skeletal
+90,AQM_A,KDSR,0.3,71,"Wnt signalling, synthesis and degradation of ketone bodies",smooth
+91,AQM_A,FBXO9,NA,8,"pyruvate metabolism, citrate cycle",smooth
+92,AQM_A,UBQLN2,0.7,85,"propanoate metabolism, propanoate metabolism",skeletal
+93,AQM_A,ZFX,-0.1,36,"propanoate metabolism, Wnt signalling",smooth
+94,AQM_A,CPLX2,-0.3,11,"fatty acid degradation, pyruvate metabolism",skeletal
+95,AQM_A,CLPX,0.3,73,"propanoate metabolism, cancer pathways",smooth
+96,AQM_A,SGCB,0.3,60,"fatty acid degradation, Wnt signalling",smooth
+97,AQM_A,SEMA5A,-0.4,20,"MAPK, synthesis and degradation of ketone bodies",smooth
+98,AQM_A,PTPRB,-0.6,66,"cancer pathways, apoptosis",skeletal
+99,AQM_A,TMEM33,0.6,21,"Wnt signalling, apoptosis",smooth
+100,AQM_A,SMC1A,2.5,25,"fatty acid degradation, fatty acid degradation",cardiac
+101,BMD_A,NF1,0.1,51,"cancer pathways, fatty acid degradation",cardiac
+102,BMD_A,UEVLD,-0.1,63,"citrate cycle, MAPK",smooth
+103,BMD_A,CDC37L1,NA,55,"MAPK, focal adhesion",cardiac
+104,BMD_A,HOXD10,0.1,25,"pyruvate metabolism, cancer pathways",skeletal
+105,BMD_A,NNT,-0.2,79,"citrate cycle, apoptosis",cardiac
+106,BMD_A,HUWE1,0.1,37,"apoptosis, cancer pathways",cardiac
+107,BMD_A,GJA5,NA,23,"focal adhesion, pyruvate metabolism",skeletal
+108,BMD_A,SPCS3,0.6,40,"fatty acid degradation, MAPK",smooth
+109,BMD_A,DOT1L,0.1,87,"pyruvate metabolism, synthesis and degradation of ketone bodies",smooth
+110,BMD_A,ATP6V0E1,0.4,16,"propanoate metabolism, Wnt signalling",skeletal
+111,BMD_A,XAF1,-0.1,8,"synthesis and degradation of ketone bodies, apoptosis",smooth
+112,BMD_A,MAFG,-0.2,8,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+113,BMD_A,AAK1,0.2,67,"apoptosis, citrate cycle",skeletal
+114,BMD_A,TM2D3,0.1,45,"Wnt signalling, synthesis and degradation of ketone bodies",skeletal
+115,BMD_A,SSR3,NA,21,"synthesis and degradation of ketone bodies, citrate cycle",skeletal
+116,BMD_A,ZNF281,-0.2,29,"cancer pathways, MAPK",cardiac
+117,BMD_A,JAM2,0.3,56,"apoptosis, apoptosis",skeletal
+118,BMD_A,CDC23,0.1,15,"Wnt signalling, fatty acid degradation",cardiac
+119,BMD_A,PLN,-0.7,86,"synthesis and degradation of ketone bodies, MAPK",smooth
+120,BMD_A,PGP,0.2,78,"MAPK, apoptosis",skeletal
+121,BMD_A,HYI,NA,34,"synthesis and degradation of ketone bodies, Wnt signalling",smooth
+122,BMD_A,IMPACT,NA,24,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+123,BMD_A,C2orf49,-0.2,76,"Wnt signalling, citrate cycle",skeletal
+124,BMD_A,HDAC11,NA,70,"apoptosis, MAPK",skeletal
+125,BMD_A,CCN4,-0.3,87,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+126,BMD_A,MKLN1,NA,88,"cancer pathways, cancer pathways",cardiac
+127,BMD_A,GPRC5B,NA,92,"pyruvate metabolism, propanoate metabolism",skeletal
+128,BMD_A,RPS6KB1,-0.2,53,"fatty acid degradation, synthesis and degradation of ketone bodies",smooth
+129,BMD_A,PSMA3,-0.2,5,"cancer pathways, apoptosis",smooth
+130,BMD_A,JARID2,0.2,2,"Wnt signalling, citrate cycle",cardiac
+131,BMD_A,ODF2,-0.1,15,"MAPK, citrate cycle",skeletal
+132,BMD_A,MON2,-0.4,14,"Wnt signalling, focal adhesion",skeletal
+133,BMD_A,PDLIM2,-0.5,36,"propanoate metabolism, propanoate metabolism",cardiac
+134,BMD_A,WAC,-0.1,91,"propanoate metabolism, cancer pathways",skeletal
+135,BMD_A,FLCN,NA,93,"apoptosis, Wnt signalling",skeletal
+136,BMD_A,ATF6,NA,4,"citrate cycle, MAPK",skeletal
+137,BMD_A,TRAFD1,0.2,10,"focal adhesion, cancer pathways",skeletal
+138,BMD_A,BICD1,NA,72,"cancer pathways, Wnt signalling",cardiac
+139,BMD_A,ANP32A,0.1,13,"synthesis and degradation of ketone bodies, citrate cycle",cardiac
+140,BMD_A,KDSR,-0.4,36,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+141,BMD_A,FBXO9,NA,63,"synthesis and degradation of ketone bodies, focal adhesion",skeletal
+142,BMD_A,UBQLN2,0.1,95,"pyruvate metabolism, synthesis and degradation of ketone bodies",skeletal
+143,BMD_A,ZFX,-0.2,55,"synthesis and degradation of ketone bodies, Wnt signalling",cardiac
+144,BMD_A,CPLX2,0.1,20,"synthesis and degradation of ketone bodies, apoptosis",smooth
+145,BMD_A,CLPX,-0.1,95,"citrate cycle, focal adhesion",skeletal
+146,BMD_A,SGCB,-0.1,52,"synthesis and degradation of ketone bodies, MAPK",cardiac
+147,BMD_A,SEMA5A,-0.1,37,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+148,BMD_A,PTPRB,0.2,19,"synthesis and degradation of ketone bodies, focal adhesion",cardiac
+149,BMD_A,TMEM33,-0.2,90,"fatty acid degradation, Wnt signalling",smooth
+150,BMD_A,SMC1A,NA,82,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+151,DMD_A,NF1,0.3,17,"focal adhesion, MAPK",smooth
+152,DMD_A,UEVLD,-0.1,68,"Wnt signalling, MAPK",smooth
+153,DMD_A,CDC37L1,-0.3,63,"cancer pathways, pyruvate metabolism",smooth
+154,DMD_A,HOXD10,-0.2,66,"Wnt signalling, fatty acid degradation",smooth
+155,DMD_A,NNT,-0.4,39,"synthesis and degradation of ketone bodies, Wnt signalling",cardiac
+156,DMD_A,HUWE1,0.1,64,"apoptosis, focal adhesion",skeletal
+157,DMD_A,GJA5,-0.1,81,"MAPK, propanoate metabolism",cardiac
+158,DMD_A,SPCS3,0.6,97,"cancer pathways, citrate cycle",skeletal
+159,DMD_A,DOT1L,-0.2,42,"focal adhesion, propanoate metabolism",smooth
+160,DMD_A,ATP6V0E1,0.4,5,"Wnt signalling, Wnt signalling",smooth
+161,DMD_A,XAF1,0.1,81,"apoptosis, cancer pathways",cardiac
+162,DMD_A,MAFG,-0.5,65,"citrate cycle, fatty acid degradation",skeletal
+163,DMD_A,AAK1,0.1,76,"focal adhesion, pyruvate metabolism",cardiac
+164,DMD_A,TM2D3,0.1,59,"fatty acid degradation, Wnt signalling",skeletal
+165,DMD_A,SSR3,-0.1,58,"fatty acid degradation, MAPK",cardiac
+166,DMD_A,ZNF281,-0.2,50,"cancer pathways, cancer pathways",cardiac
+167,DMD_A,JAM2,1,32,"pyruvate metabolism, apoptosis",skeletal
+168,DMD_A,CDC23,0.5,2,"citrate cycle, fatty acid degradation",cardiac
+169,DMD_A,PLN,-0.6,0,"propanoate metabolism, cancer pathways",skeletal
+170,DMD_A,PGP,-0.2,31,"focal adhesion, citrate cycle",smooth
+171,DMD_A,HYI,-0.1,13,"MAPK, citrate cycle",skeletal
+172,DMD_A,IMPACT,0.3,55,"propanoate metabolism, synthesis and degradation of ketone bodies",smooth
+173,DMD_A,C2orf49,-0.2,41,"focal adhesion, synthesis and degradation of ketone bodies",skeletal
+174,DMD_A,HDAC11,-0.3,91,"citrate cycle, Wnt signalling",smooth
+175,DMD_A,CCN4,-0.4,9,"Wnt signalling, propanoate metabolism",skeletal
+176,DMD_A,MKLN1,-0.1,51,"Wnt signalling, apoptosis",smooth
+177,DMD_A,GPRC5B,NA,47,"fatty acid degradation, citrate cycle",skeletal
+178,DMD_A,RPS6KB1,-0.1,15,"Wnt signalling, cancer pathways",skeletal
+179,DMD_A,PSMA3,-0.1,72,"citrate cycle, citrate cycle",skeletal
+180,DMD_A,JARID2,0.1,26,"fatty acid degradation, cancer pathways",cardiac
+181,DMD_A,ODF2,-0.3,39,"citrate cycle, Wnt signalling",smooth
+182,DMD_A,MON2,0.3,80,"citrate cycle, synthesis and degradation of ketone bodies",skeletal
+183,DMD_A,PDLIM2,-0.8,2,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+184,DMD_A,WAC,0.5,67,"focal adhesion, cancer pathways",smooth
+185,DMD_A,FLCN,0.1,63,"focal adhesion, pyruvate metabolism",smooth
+186,DMD_A,ATF6,NA,3,"Wnt signalling, MAPK",skeletal
+187,DMD_A,TRAFD1,0.2,78,"focal adhesion, fatty acid degradation",skeletal
+188,DMD_A,BICD1,-0.1,61,"pyruvate metabolism, fatty acid degradation",smooth
+189,DMD_A,ANP32A,0.3,32,"apoptosis, pyruvate metabolism",cardiac
+190,DMD_A,KDSR,0.2,66,"fatty acid degradation, MAPK",smooth
+191,DMD_A,FBXO9,0.3,77,"pyruvate metabolism, propanoate metabolism",cardiac
+192,DMD_A,UBQLN2,0.1,39,"focal adhesion, citrate cycle",smooth
+193,DMD_A,ZFX,-0.4,37,"MAPK, propanoate metabolism",smooth
+194,DMD_A,CPLX2,-0.2,30,"apoptosis, propanoate metabolism",smooth
+195,DMD_A,CLPX,-0.3,63,"Wnt signalling, cancer pathways",smooth
+196,DMD_A,SGCB,-0.2,46,"cancer pathways, cancer pathways",skeletal
+197,DMD_A,SEMA5A,-0.3,64,"propanoate metabolism, fatty acid degradation",skeletal
+198,DMD_A,PTPRB,0.3,39,"apoptosis, citrate cycle",cardiac
+199,DMD_A,TMEM33,0.1,73,"cancer pathways, cancer pathways",skeletal
+200,DMD_A,SMC1A,0.5,52,"fatty acid degradation, propanoate metabolism",skeletal
+201,EDMD.AD_A,NF1,0.7,18,"apoptosis, citrate cycle",skeletal
+202,EDMD.AD_A,UEVLD,-0.2,81,"MAPK, Wnt signalling",cardiac
+203,EDMD.AD_A,CDC37L1,0.6,3,"propanoate metabolism, synthesis and degradation of ketone bodies",smooth
+204,EDMD.AD_A,HOXD10,-0.4,52,"Wnt signalling, focal adhesion",cardiac
+205,EDMD.AD_A,NNT,-0.3,60,"fatty acid degradation, focal adhesion",smooth
+206,EDMD.AD_A,HUWE1,0.4,32,"fatty acid degradation, citrate cycle",skeletal
+207,EDMD.AD_A,GJA5,NA,80,"fatty acid degradation, cancer pathways",skeletal
+208,EDMD.AD_A,SPCS3,0.5,74,"Wnt signalling, synthesis and degradation of ketone bodies",skeletal
+209,EDMD.AD_A,DOT1L,-0.2,28,"fatty acid degradation, propanoate metabolism",cardiac
+210,EDMD.AD_A,ATP6V0E1,0.5,52,"cancer pathways, apoptosis",skeletal
+211,EDMD.AD_A,XAF1,-0.2,76,"focal adhesion, pyruvate metabolism",smooth
+212,EDMD.AD_A,MAFG,-0.3,29,"fatty acid degradation, fatty acid degradation",cardiac
+213,EDMD.AD_A,AAK1,0.2,1,"apoptosis, propanoate metabolism",skeletal
+214,EDMD.AD_A,TM2D3,0.6,79,"apoptosis, synthesis and degradation of ketone bodies",smooth
+215,EDMD.AD_A,SSR3,-0.4,55,"focal adhesion, synthesis and degradation of ketone bodies",smooth
+216,EDMD.AD_A,ZNF281,-0.3,59,"cancer pathways, propanoate metabolism",cardiac
+217,EDMD.AD_A,JAM2,0.5,27,"MAPK, cancer pathways",smooth
+218,EDMD.AD_A,CDC23,0.6,91,"MAPK, pyruvate metabolism",smooth
+219,EDMD.AD_A,PLN,-0.5,32,"propanoate metabolism, citrate cycle",cardiac
+220,EDMD.AD_A,PGP,-0.2,99,"Wnt signalling, cancer pathways",cardiac
+221,EDMD.AD_A,HYI,-0.1,42,"apoptosis, synthesis and degradation of ketone bodies",cardiac
+222,EDMD.AD_A,IMPACT,0.3,22,"citrate cycle, citrate cycle",smooth
+223,EDMD.AD_A,C2orf49,-0.1,98,"MAPK, synthesis and degradation of ketone bodies",cardiac
+224,EDMD.AD_A,HDAC11,-0.3,22,"MAPK, focal adhesion",cardiac
+225,EDMD.AD_A,CCN4,-0.4,41,"propanoate metabolism, synthesis and degradation of ketone bodies",cardiac
+226,EDMD.AD_A,MKLN1,0.2,69,"MAPK, cancer pathways",skeletal
+227,EDMD.AD_A,GPRC5B,0.2,34,"fatty acid degradation, fatty acid degradation",smooth
+228,EDMD.AD_A,RPS6KB1,NA,97,"pyruvate metabolism, citrate cycle",skeletal
+229,EDMD.AD_A,PSMA3,0.3,64,"Wnt signalling, MAPK",smooth
+230,EDMD.AD_A,JARID2,0.1,57,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",cardiac
+231,EDMD.AD_A,ODF2,-0.2,79,"MAPK, focal adhesion",skeletal
+232,EDMD.AD_A,MON2,0.4,55,"propanoate metabolism, Wnt signalling",cardiac
+233,EDMD.AD_A,PDLIM2,-0.6,75,"fatty acid degradation, propanoate metabolism",smooth
+234,EDMD.AD_A,WAC,1,53,"citrate cycle, synthesis and degradation of ketone bodies",smooth
+235,EDMD.AD_A,FLCN,0.1,81,"pyruvate metabolism, pyruvate metabolism",cardiac
+236,EDMD.AD_A,ATF6,NA,44,"pyruvate metabolism, synthesis and degradation of ketone bodies",cardiac
+237,EDMD.AD_A,TRAFD1,NA,96,"Wnt signalling, focal adhesion",smooth
+238,EDMD.AD_A,BICD1,-0.2,85,"Wnt signalling, Wnt signalling",cardiac
+239,EDMD.AD_A,ANP32A,0.5,91,"cancer pathways, propanoate metabolism",smooth
+240,EDMD.AD_A,KDSR,0.2,95,"synthesis and degradation of ketone bodies, propanoate metabolism",cardiac
+241,EDMD.AD_A,FBXO9,-0.1,26,"citrate cycle, Wnt signalling",smooth
+242,EDMD.AD_A,UBQLN2,0.7,77,"fatty acid degradation, propanoate metabolism",smooth
+243,EDMD.AD_A,ZFX,-0.4,23,"focal adhesion, cancer pathways",skeletal
+244,EDMD.AD_A,CPLX2,-0.3,98,"pyruvate metabolism, propanoate metabolism",smooth
+245,EDMD.AD_A,CLPX,0.3,93,"citrate cycle, pyruvate metabolism",cardiac
+246,EDMD.AD_A,SGCB,-0.3,37,"fatty acid degradation, fatty acid degradation",smooth
+247,EDMD.AD_A,SEMA5A,-0.1,25,"pyruvate metabolism, focal adhesion",skeletal
+248,EDMD.AD_A,PTPRB,-0.3,64,"Wnt signalling, citrate cycle",smooth
+249,EDMD.AD_A,TMEM33,0.2,40,"Wnt signalling, citrate cycle",skeletal
+250,EDMD.AD_A,SMC1A,0.9,65,"Wnt signalling, fatty acid degradation",smooth
+251,EDMD.XR_A,NF1,0.2,62,"apoptosis, synthesis and degradation of ketone bodies",cardiac
+252,EDMD.XR_A,UEVLD,NA,62,"focal adhesion, pyruvate metabolism",cardiac
+253,EDMD.XR_A,CDC37L1,0.6,59,"propanoate metabolism, cancer pathways",smooth
+254,EDMD.XR_A,HOXD10,NA,72,"pyruvate metabolism, synthesis and degradation of ketone bodies",cardiac
+255,EDMD.XR_A,NNT,-0.1,59,"citrate cycle, apoptosis",cardiac
+256,EDMD.XR_A,HUWE1,0.3,49,"Wnt signalling, citrate cycle",cardiac
+257,EDMD.XR_A,GJA5,NA,88,"MAPK, cancer pathways",cardiac
+258,EDMD.XR_A,SPCS3,0.4,49,"synthesis and degradation of ketone bodies, propanoate metabolism",smooth
+259,EDMD.XR_A,DOT1L,NA,11,"MAPK, synthesis and degradation of ketone bodies",cardiac
+260,EDMD.XR_A,ATP6V0E1,0.4,36,"propanoate metabolism, fatty acid degradation",skeletal
+261,EDMD.XR_A,XAF1,NA,8,"synthesis and degradation of ketone bodies, pyruvate metabolism",skeletal
+262,EDMD.XR_A,MAFG,-0.3,52,"Wnt signalling, focal adhesion",cardiac
+263,EDMD.XR_A,AAK1,NA,32,"fatty acid degradation, citrate cycle",smooth
+264,EDMD.XR_A,TM2D3,0.4,67,"focal adhesion, pyruvate metabolism",smooth
+265,EDMD.XR_A,SSR3,NA,15,"MAPK, synthesis and degradation of ketone bodies",cardiac
+266,EDMD.XR_A,ZNF281,NA,45,"focal adhesion, apoptosis",skeletal
+267,EDMD.XR_A,JAM2,NA,59,"apoptosis, MAPK",skeletal
+268,EDMD.XR_A,CDC23,0.3,53,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",cardiac
+269,EDMD.XR_A,PLN,-0.3,9,"cancer pathways, Wnt signalling",skeletal
+270,EDMD.XR_A,PGP,-0.1,33,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+271,EDMD.XR_A,HYI,0.1,100,"fatty acid degradation, propanoate metabolism",skeletal
+272,EDMD.XR_A,IMPACT,NA,22,"Wnt signalling, pyruvate metabolism",smooth
+273,EDMD.XR_A,C2orf49,NA,17,"citrate cycle, focal adhesion",skeletal
+274,EDMD.XR_A,HDAC11,NA,38,"focal adhesion, MAPK",smooth
+275,EDMD.XR_A,CCN4,NA,44,"citrate cycle, fatty acid degradation",cardiac
+276,EDMD.XR_A,MKLN1,NA,69,"Wnt signalling, cancer pathways",cardiac
+277,EDMD.XR_A,GPRC5B,0.1,58,"MAPK, cancer pathways",skeletal
+278,EDMD.XR_A,RPS6KB1,0.1,93,"citrate cycle, focal adhesion",skeletal
+279,EDMD.XR_A,PSMA3,0.1,52,"pyruvate metabolism, cancer pathways",skeletal
+280,EDMD.XR_A,JARID2,NA,35,"focal adhesion, pyruvate metabolism",smooth
+281,EDMD.XR_A,ODF2,-0.2,68,"propanoate metabolism, Wnt signalling",cardiac
+282,EDMD.XR_A,MON2,NA,5,"MAPK, MAPK",smooth
+283,EDMD.XR_A,PDLIM2,-0.6,58,"pyruvate metabolism, fatty acid degradation",cardiac
+284,EDMD.XR_A,WAC,0.5,57,"cancer pathways, apoptosis",smooth
+285,EDMD.XR_A,FLCN,NA,5,"citrate cycle, Wnt signalling",cardiac
+286,EDMD.XR_A,ATF6,NA,90,"propanoate metabolism, propanoate metabolism",cardiac
+287,EDMD.XR_A,TRAFD1,NA,16,"pyruvate metabolism, citrate cycle",smooth
+288,EDMD.XR_A,BICD1,NA,8,"fatty acid degradation, pyruvate metabolism",smooth
+289,EDMD.XR_A,ANP32A,0.5,91,"cancer pathways, Wnt signalling",cardiac
+290,EDMD.XR_A,KDSR,0.2,37,"cancer pathways, pyruvate metabolism",cardiac
+291,EDMD.XR_A,FBXO9,0.2,92,"apoptosis, Wnt signalling",skeletal
+292,EDMD.XR_A,UBQLN2,0.3,75,"synthesis and degradation of ketone bodies, propanoate metabolism",skeletal
+293,EDMD.XR_A,ZFX,NA,22,"fatty acid degradation, Wnt signalling",cardiac
+294,EDMD.XR_A,CPLX2,NA,68,"MAPK, apoptosis",skeletal
+295,EDMD.XR_A,CLPX,NA,69,"pyruvate metabolism, MAPK",skeletal
+296,EDMD.XR_A,SGCB,-0.2,60,"cancer pathways, Wnt signalling",cardiac
+297,EDMD.XR_A,SEMA5A,NA,46,"Wnt signalling, Wnt signalling",cardiac
+298,EDMD.XR_A,PTPRB,-0.4,56,"synthesis and degradation of ketone bodies, Wnt signalling",smooth
+299,EDMD.XR_A,TMEM33,0.3,31,"apoptosis, MAPK",smooth
+300,EDMD.XR_A,SMC1A,0.1,80,"citrate cycle, fatty acid degradation",smooth
+301,FSHD_A,NF1,0.1,67,"Wnt signalling, synthesis and degradation of ketone bodies",skeletal
+302,FSHD_A,UEVLD,0.1,77,"MAPK, Wnt signalling",cardiac
+303,FSHD_A,CDC37L1,-0.1,89,"synthesis and degradation of ketone bodies, cancer pathways",skeletal
+304,FSHD_A,HOXD10,-0.2,85,"focal adhesion, fatty acid degradation",cardiac
+305,FSHD_A,NNT,NA,74,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+306,FSHD_A,HUWE1,0.3,37,"fatty acid degradation, synthesis and degradation of ketone bodies",cardiac
+307,FSHD_A,GJA5,-0.1,13,"cancer pathways, synthesis and degradation of ketone bodies",cardiac
+308,FSHD_A,SPCS3,0.4,57,"fatty acid degradation, fatty acid degradation",smooth
+309,FSHD_A,DOT1L,NA,22,"focal adhesion, synthesis and degradation of ketone bodies",smooth
+310,FSHD_A,ATP6V0E1,0.2,75,"pyruvate metabolism, propanoate metabolism",skeletal
+311,FSHD_A,XAF1,0.1,78,"cancer pathways, synthesis and degradation of ketone bodies",cardiac
+312,FSHD_A,MAFG,0.3,27,"citrate cycle, propanoate metabolism",skeletal
+313,FSHD_A,AAK1,0.3,59,"focal adhesion, citrate cycle",cardiac
+314,FSHD_A,TM2D3,0.6,46,"apoptosis, synthesis and degradation of ketone bodies",skeletal
+315,FSHD_A,SSR3,-0.1,82,"Wnt signalling, synthesis and degradation of ketone bodies",cardiac
+316,FSHD_A,ZNF281,0.3,79,"focal adhesion, pyruvate metabolism",smooth
+317,FSHD_A,JAM2,0.2,48,"Wnt signalling, pyruvate metabolism",skeletal
+318,FSHD_A,CDC23,0.3,56,"citrate cycle, citrate cycle",smooth
+319,FSHD_A,PLN,-0.1,2,"cancer pathways, Wnt signalling",cardiac
+320,FSHD_A,PGP,-0.1,98,"fatty acid degradation, synthesis and degradation of ketone bodies",cardiac
+321,FSHD_A,HYI,-0.1,56,"fatty acid degradation, pyruvate metabolism",skeletal
+322,FSHD_A,IMPACT,0.2,49,"apoptosis, cancer pathways",smooth
+323,FSHD_A,C2orf49,-0.1,54,"synthesis and degradation of ketone bodies, focal adhesion",cardiac
+324,FSHD_A,HDAC11,-0.2,56,"fatty acid degradation, Wnt signalling",skeletal
+325,FSHD_A,CCN4,-0.2,61,"pyruvate metabolism, cancer pathways",cardiac
+326,FSHD_A,MKLN1,NA,34,"focal adhesion, citrate cycle",cardiac
+327,FSHD_A,GPRC5B,0.4,84,"pyruvate metabolism, focal adhesion",skeletal
+328,FSHD_A,RPS6KB1,0.4,40,"citrate cycle, apoptosis",smooth
+329,FSHD_A,PSMA3,0.3,68,"pyruvate metabolism, apoptosis",skeletal
+330,FSHD_A,JARID2,-0.1,77,"fatty acid degradation, pyruvate metabolism",smooth
+331,FSHD_A,ODF2,-0.1,13,"citrate cycle, MAPK",smooth
+332,FSHD_A,MON2,0.2,63,"apoptosis, Wnt signalling",skeletal
+333,FSHD_A,PDLIM2,-0.1,31,"pyruvate metabolism, Wnt signalling",smooth
+334,FSHD_A,WAC,0.2,18,"cancer pathways, MAPK",cardiac
+335,FSHD_A,FLCN,0.1,67,"focal adhesion, citrate cycle",skeletal
+336,FSHD_A,ATF6,NA,87,"apoptosis, apoptosis",smooth
+337,FSHD_A,TRAFD1,NA,21,"fatty acid degradation, cancer pathways",smooth
+338,FSHD_A,BICD1,-0.2,2,"MAPK, Wnt signalling",skeletal
+339,FSHD_A,ANP32A,0.3,47,"fatty acid degradation, MAPK",cardiac
+340,FSHD_A,KDSR,0.4,85,"propanoate metabolism, MAPK",cardiac
+341,FSHD_A,FBXO9,0.1,73,"MAPK, propanoate metabolism",skeletal
+342,FSHD_A,UBQLN2,0.9,68,"citrate cycle, apoptosis",skeletal
+343,FSHD_A,ZFX,-0.2,48,"propanoate metabolism, fatty acid degradation",skeletal
+344,FSHD_A,CPLX2,-0.3,10,"propanoate metabolism, Wnt signalling",skeletal
+345,FSHD_A,CLPX,0.3,71,"Wnt signalling, apoptosis",smooth
+346,FSHD_A,SGCB,0.3,35,"propanoate metabolism, citrate cycle",smooth
+347,FSHD_A,SEMA5A,-0.3,4,"MAPK, MAPK",cardiac
+348,FSHD_A,PTPRB,0.1,90,"pyruvate metabolism, focal adhesion",skeletal
+349,FSHD_A,TMEM33,0.3,74,"focal adhesion, propanoate metabolism",smooth
+350,FSHD_A,SMC1A,0.7,48,"pyruvate metabolism, focal adhesion",skeletal
+351,HSP_A,NF1,-0.6,9,"synthesis and degradation of ketone bodies, focal adhesion",cardiac
+352,HSP_A,UEVLD,-0.3,5,"Wnt signalling, cancer pathways",skeletal
+353,HSP_A,CDC37L1,-0.9,55,"synthesis and degradation of ketone bodies, MAPK",smooth
+354,HSP_A,HOXD10,0.2,85,"cancer pathways, pyruvate metabolism",skeletal
+355,HSP_A,NNT,-1.8,54,"cancer pathways, citrate cycle",smooth
+356,HSP_A,HUWE1,0.1,3,"cancer pathways, fatty acid degradation",smooth
+357,HSP_A,GJA5,0.4,47,"apoptosis, focal adhesion",skeletal
+358,HSP_A,SPCS3,-0.5,82,"pyruvate metabolism, citrate cycle",smooth
+359,HSP_A,DOT1L,0.2,70,"fatty acid degradation, MAPK",smooth
+360,HSP_A,ATP6V0E1,-0.2,82,"citrate cycle, citrate cycle",cardiac
+361,HSP_A,XAF1,-0.1,69,"propanoate metabolism, citrate cycle",skeletal
+362,HSP_A,MAFG,0.3,13,"propanoate metabolism, pyruvate metabolism",skeletal
+363,HSP_A,AAK1,-0.1,39,"citrate cycle, Wnt signalling",cardiac
+364,HSP_A,TM2D3,-0.3,62,"focal adhesion, focal adhesion",smooth
+365,HSP_A,SSR3,-0.4,18,"focal adhesion, apoptosis",smooth
+366,HSP_A,ZNF281,-0.3,47,"synthesis and degradation of ketone bodies, Wnt signalling",skeletal
+367,HSP_A,JAM2,NA,93,"citrate cycle, pyruvate metabolism",smooth
+368,HSP_A,CDC23,NA,76,"citrate cycle, synthesis and degradation of ketone bodies",skeletal
+369,HSP_A,PLN,-0.8,5,"Wnt signalling, citrate cycle",cardiac
+370,HSP_A,PGP,0.3,57,"pyruvate metabolism, apoptosis",skeletal
+371,HSP_A,HYI,0.5,42,"propanoate metabolism, citrate cycle",smooth
+372,HSP_A,IMPACT,NA,12,"pyruvate metabolism, propanoate metabolism",skeletal
+373,HSP_A,C2orf49,-0.3,36,"MAPK, cancer pathways",smooth
+374,HSP_A,HDAC11,NA,14,"cancer pathways, cancer pathways",cardiac
+375,HSP_A,CCN4,NA,4,"Wnt signalling, MAPK",smooth
+376,HSP_A,MKLN1,NA,46,"propanoate metabolism, apoptosis",cardiac
+377,HSP_A,GPRC5B,0.3,74,"MAPK, propanoate metabolism",cardiac
+378,HSP_A,RPS6KB1,-0.3,94,"apoptosis, focal adhesion",skeletal
+379,HSP_A,PSMA3,-1,3,"Wnt signalling, propanoate metabolism",cardiac
+380,HSP_A,JARID2,NA,10,"citrate cycle, apoptosis",skeletal
+381,HSP_A,ODF2,0.3,79,"Wnt signalling, MAPK",cardiac
+382,HSP_A,MON2,-0.3,37,"fatty acid degradation, Wnt signalling",cardiac
+383,HSP_A,PDLIM2,0.6,76,"pyruvate metabolism, fatty acid degradation",skeletal
+384,HSP_A,WAC,-0.4,82,"propanoate metabolism, pyruvate metabolism",cardiac
+385,HSP_A,FLCN,NA,83,"fatty acid degradation, propanoate metabolism",smooth
+386,HSP_A,ATF6,NA,57,"fatty acid degradation, propanoate metabolism",smooth
+387,HSP_A,TRAFD1,NA,92,"synthesis and degradation of ketone bodies, focal adhesion",cardiac
+388,HSP_A,BICD1,NA,60,"apoptosis, pyruvate metabolism",smooth
+389,HSP_A,ANP32A,-0.3,25,"pyruvate metabolism, Wnt signalling",smooth
+390,HSP_A,KDSR,-0.4,62,"synthesis and degradation of ketone bodies, focal adhesion",skeletal
+391,HSP_A,FBXO9,-0.5,91,"focal adhesion, propanoate metabolism",cardiac
+392,HSP_A,UBQLN2,-0.6,56,"citrate cycle, MAPK",cardiac
+393,HSP_A,ZFX,-0.3,6,"apoptosis, citrate cycle",smooth
+394,HSP_A,CPLX2,0.2,22,"apoptosis, synthesis and degradation of ketone bodies",skeletal
+395,HSP_A,CLPX,-0.4,42,"apoptosis, fatty acid degradation",skeletal
+396,HSP_A,SGCB,-0.1,51,"fatty acid degradation, apoptosis",skeletal
+397,HSP_A,SEMA5A,NA,54,"MAPK, citrate cycle",skeletal
+398,HSP_A,PTPRB,-0.5,60,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+399,HSP_A,TMEM33,-0.3,32,"propanoate metabolism, cancer pathways",skeletal
+400,HSP_A,SMC1A,-0.4,23,"pyruvate metabolism, pyruvate metabolism",smooth
+401,JDM_A,NF1,0.3,97,"citrate cycle, fatty acid degradation",skeletal
+402,JDM_A,UEVLD,0.2,13,"propanoate metabolism, MAPK",skeletal
+403,JDM_A,CDC37L1,0.6,17,"propanoate metabolism, Wnt signalling",smooth
+404,JDM_A,HOXD10,-0.3,60,"pyruvate metabolism, fatty acid degradation",cardiac
+405,JDM_A,NNT,-1,97,"Wnt signalling, pyruvate metabolism",skeletal
+406,JDM_A,HUWE1,0.2,25,"fatty acid degradation, focal adhesion",cardiac
+407,JDM_A,GJA5,-0.2,98,"pyruvate metabolism, synthesis and degradation of ketone bodies",cardiac
+408,JDM_A,SPCS3,0.7,64,"Wnt signalling, Wnt signalling",skeletal
+409,JDM_A,DOT1L,-0.4,80,"Wnt signalling, fatty acid degradation",smooth
+410,JDM_A,ATP6V0E1,0.5,24,"citrate cycle, propanoate metabolism",cardiac
+411,JDM_A,XAF1,3.1,65,"propanoate metabolism, propanoate metabolism",cardiac
+412,JDM_A,MAFG,0.2,12,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+413,JDM_A,AAK1,0.6,14,"MAPK, cancer pathways",skeletal
+414,JDM_A,TM2D3,0.8,51,"cancer pathways, MAPK",skeletal
+415,JDM_A,SSR3,-0.1,84,"Wnt signalling, fatty acid degradation",skeletal
+416,JDM_A,ZNF281,0.3,79,"fatty acid degradation, propanoate metabolism",smooth
+417,JDM_A,JAM2,0.4,11,"synthesis and degradation of ketone bodies, fatty acid degradation",cardiac
+418,JDM_A,CDC23,1,47,"cancer pathways, propanoate metabolism",cardiac
+419,JDM_A,PLN,-0.5,34,"MAPK, propanoate metabolism",skeletal
+420,JDM_A,PGP,-0.3,70,"MAPK, apoptosis",smooth
+421,JDM_A,HYI,-0.3,29,"cancer pathways, pyruvate metabolism",cardiac
+422,JDM_A,IMPACT,0.3,51,"propanoate metabolism, synthesis and degradation of ketone bodies",skeletal
+423,JDM_A,C2orf49,NA,5,"citrate cycle, apoptosis",smooth
+424,JDM_A,HDAC11,-0.4,16,"cancer pathways, MAPK",skeletal
+425,JDM_A,CCN4,-0.5,52,"Wnt signalling, cancer pathways",cardiac
+426,JDM_A,MKLN1,0.3,11,"MAPK, apoptosis",smooth
+427,JDM_A,GPRC5B,NA,5,"pyruvate metabolism, citrate cycle",cardiac
+428,JDM_A,RPS6KB1,0.6,29,"synthesis and degradation of ketone bodies, citrate cycle",skeletal
+429,JDM_A,PSMA3,0.6,20,"focal adhesion, pyruvate metabolism",cardiac
+430,JDM_A,JARID2,0.1,92,"synthesis and degradation of ketone bodies, pyruvate metabolism",smooth
+431,JDM_A,ODF2,-0.4,87,"MAPK, fatty acid degradation",cardiac
+432,JDM_A,MON2,0.6,45,"propanoate metabolism, focal adhesion",skeletal
+433,JDM_A,PDLIM2,-0.4,39,"Wnt signalling, Wnt signalling",cardiac
+434,JDM_A,WAC,0.9,26,"MAPK, apoptosis",skeletal
+435,JDM_A,FLCN,0.4,63,"pyruvate metabolism, pyruvate metabolism",cardiac
+436,JDM_A,ATF6,0.1,5,"pyruvate metabolism, fatty acid degradation",skeletal
+437,JDM_A,TRAFD1,0.6,98,"synthesis and degradation of ketone bodies, Wnt signalling",smooth
+438,JDM_A,BICD1,-0.3,59,"fatty acid degradation, citrate cycle",smooth
+439,JDM_A,ANP32A,0.5,14,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+440,JDM_A,KDSR,0.6,9,"pyruvate metabolism, focal adhesion",smooth
+441,JDM_A,FBXO9,0.3,91,"cancer pathways, Wnt signalling",smooth
+442,JDM_A,UBQLN2,0.9,12,"focal adhesion, pyruvate metabolism",smooth
+443,JDM_A,ZFX,-0.2,51,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+444,JDM_A,CPLX2,-0.4,99,"MAPK, cancer pathways",skeletal
+445,JDM_A,CLPX,0.3,86,"propanoate metabolism, focal adhesion",smooth
+446,JDM_A,SGCB,0.2,65,"propanoate metabolism, apoptosis",cardiac
+447,JDM_A,SEMA5A,-0.4,81,"cancer pathways, propanoate metabolism",smooth
+448,JDM_A,PTPRB,0.1,27,"propanoate metabolism, citrate cycle",skeletal
+449,JDM_A,TMEM33,0.5,30,"propanoate metabolism, Wnt signalling",cardiac
+450,JDM_A,SMC1A,1.6,92,"citrate cycle, Wnt signalling",cardiac
+451,LGMD2A_A,NF1,0.1,65,"propanoate metabolism, pyruvate metabolism",cardiac
+452,LGMD2A_A,UEVLD,-0.2,48,"MAPK, MAPK",smooth
+453,LGMD2A_A,CDC37L1,-0.4,6,"citrate cycle, fatty acid degradation",cardiac
+454,LGMD2A_A,HOXD10,-0.1,6,"pyruvate metabolism, synthesis and degradation of ketone bodies",smooth
+455,LGMD2A_A,NNT,-0.8,8,"apoptosis, cancer pathways",smooth
+456,LGMD2A_A,HUWE1,0.1,71,"MAPK, cancer pathways",smooth
+457,LGMD2A_A,GJA5,NA,37,"apoptosis, citrate cycle",cardiac
+458,LGMD2A_A,SPCS3,0.2,95,"Wnt signalling, propanoate metabolism",skeletal
+459,LGMD2A_A,DOT1L,-0.1,14,"focal adhesion, fatty acid degradation",skeletal
+460,LGMD2A_A,ATP6V0E1,0.2,79,"synthesis and degradation of ketone bodies, MAPK",smooth
+461,LGMD2A_A,XAF1,NA,82,"synthesis and degradation of ketone bodies, citrate cycle",cardiac
+462,LGMD2A_A,MAFG,-0.1,91,"fatty acid degradation, focal adhesion",smooth
+463,LGMD2A_A,AAK1,NA,84,"fatty acid degradation, propanoate metabolism",skeletal
+464,LGMD2A_A,TM2D3,-0.1,20,"apoptosis, pyruvate metabolism",skeletal
+465,LGMD2A_A,SSR3,-0.3,44,"citrate cycle, focal adhesion",smooth
+466,LGMD2A_A,ZNF281,-0.2,95,"cancer pathways, focal adhesion",cardiac
+467,LGMD2A_A,JAM2,0.4,93,"MAPK, cancer pathways",skeletal
+468,LGMD2A_A,CDC23,0.1,29,"propanoate metabolism, focal adhesion",skeletal
+469,LGMD2A_A,PLN,-0.9,16,"citrate cycle, fatty acid degradation",skeletal
+470,LGMD2A_A,PGP,0.1,10,"propanoate metabolism, propanoate metabolism",skeletal
+471,LGMD2A_A,HYI,0.2,76,"propanoate metabolism, pyruvate metabolism",skeletal
+472,LGMD2A_A,IMPACT,NA,37,"pyruvate metabolism, pyruvate metabolism",smooth
+473,LGMD2A_A,C2orf49,-0.3,54,"propanoate metabolism, synthesis and degradation of ketone bodies",cardiac
+474,LGMD2A_A,HDAC11,NA,100,"cancer pathways, synthesis and degradation of ketone bodies",cardiac
+475,LGMD2A_A,CCN4,-0.2,80,"pyruvate metabolism, apoptosis",skeletal
+476,LGMD2A_A,MKLN1,-0.2,7,"fatty acid degradation, apoptosis",smooth
+477,LGMD2A_A,GPRC5B,NA,28,"citrate cycle, fatty acid degradation",smooth
+478,LGMD2A_A,RPS6KB1,-0.2,28,"cancer pathways, focal adhesion",skeletal
+479,LGMD2A_A,PSMA3,-0.2,92,"focal adhesion, synthesis and degradation of ketone bodies",smooth
+480,LGMD2A_A,JARID2,0.1,64,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",cardiac
+481,LGMD2A_A,ODF2,NA,47,"fatty acid degradation, propanoate metabolism",cardiac
+482,LGMD2A_A,MON2,-0.2,95,"MAPK, apoptosis",smooth
+483,LGMD2A_A,PDLIM2,-0.7,56,"cancer pathways, fatty acid degradation",cardiac
+484,LGMD2A_A,WAC,0.1,82,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+485,LGMD2A_A,FLCN,-0.1,39,"fatty acid degradation, propanoate metabolism",cardiac
+486,LGMD2A_A,ATF6,NA,0,"cancer pathways, Wnt signalling",cardiac
+487,LGMD2A_A,TRAFD1,NA,74,"citrate cycle, apoptosis",cardiac
+488,LGMD2A_A,BICD1,NA,48,"Wnt signalling, Wnt signalling",cardiac
+489,LGMD2A_A,ANP32A,0.1,30,"focal adhesion, cancer pathways",skeletal
+490,LGMD2A_A,KDSR,-0.1,6,"MAPK, synthesis and degradation of ketone bodies",skeletal
+491,LGMD2A_A,FBXO9,NA,89,"pyruvate metabolism, citrate cycle",cardiac
+492,LGMD2A_A,UBQLN2,-0.3,85,"apoptosis, apoptosis",cardiac
+493,LGMD2A_A,ZFX,-0.3,23,"apoptosis, Wnt signalling",smooth
+494,LGMD2A_A,CPLX2,NA,74,"MAPK, Wnt signalling",skeletal
+495,LGMD2A_A,CLPX,-0.3,78,"citrate cycle, fatty acid degradation",cardiac
+496,LGMD2A_A,SGCB,-0.1,89,"pyruvate metabolism, propanoate metabolism",cardiac
+497,LGMD2A_A,SEMA5A,NA,91,"apoptosis, fatty acid degradation",cardiac
+498,LGMD2A_A,PTPRB,-0.3,49,"pyruvate metabolism, focal adhesion",cardiac
+499,LGMD2A_A,TMEM33,-0.2,88,"propanoate metabolism, Wnt signalling",smooth
+500,LGMD2A_A,SMC1A,0.1,17,"apoptosis, propanoate metabolism",cardiac
+501,LGMD2B_A,NF1,0.1,11,"MAPK, propanoate metabolism",skeletal
+502,LGMD2B_A,UEVLD,-0.2,39,"citrate cycle, propanoate metabolism",skeletal
+503,LGMD2B_A,CDC37L1,-0.2,89,"Wnt signalling, pyruvate metabolism",skeletal
+504,LGMD2B_A,HOXD10,0.1,6,"MAPK, pyruvate metabolism",skeletal
+505,LGMD2B_A,NNT,-0.8,72,"focal adhesion, MAPK",skeletal
+506,LGMD2B_A,HUWE1,0.1,87,"pyruvate metabolism, synthesis and degradation of ketone bodies",cardiac
+507,LGMD2B_A,GJA5,NA,72,"citrate cycle, focal adhesion",smooth
+508,LGMD2B_A,SPCS3,0.3,56,"citrate cycle, fatty acid degradation",skeletal
+509,LGMD2B_A,DOT1L,NA,25,"apoptosis, focal adhesion",cardiac
+510,LGMD2B_A,ATP6V0E1,0.1,54,"Wnt signalling, apoptosis",cardiac
+511,LGMD2B_A,XAF1,NA,9,"focal adhesion, fatty acid degradation",smooth
+512,LGMD2B_A,MAFG,-0.2,9,"apoptosis, propanoate metabolism",cardiac
+513,LGMD2B_A,AAK1,0.2,18,"MAPK, synthesis and degradation of ketone bodies",smooth
+514,LGMD2B_A,TM2D3,-0.1,38,"Wnt signalling, citrate cycle",cardiac
+515,LGMD2B_A,SSR3,-0.3,49,"apoptosis, Wnt signalling",smooth
+516,LGMD2B_A,ZNF281,-0.4,79,"MAPK, propanoate metabolism",skeletal
+517,LGMD2B_A,JAM2,0.1,42,"apoptosis, focal adhesion",cardiac
+518,LGMD2B_A,CDC23,0.1,20,"fatty acid degradation, apoptosis",skeletal
+519,LGMD2B_A,PLN,-0.9,33,"propanoate metabolism, apoptosis",cardiac
+520,LGMD2B_A,PGP,0.1,92,"Wnt signalling, fatty acid degradation",smooth
+521,LGMD2B_A,HYI,0.1,39,"synthesis and degradation of ketone bodies, apoptosis",smooth
+522,LGMD2B_A,IMPACT,-0.1,54,"synthesis and degradation of ketone bodies, citrate cycle",cardiac
+523,LGMD2B_A,C2orf49,-0.2,91,"apoptosis, propanoate metabolism",skeletal
+524,LGMD2B_A,HDAC11,NA,64,"fatty acid degradation, focal adhesion",cardiac
+525,LGMD2B_A,CCN4,-0.2,28,"focal adhesion, citrate cycle",smooth
+526,LGMD2B_A,MKLN1,-0.1,83,"citrate cycle, citrate cycle",skeletal
+527,LGMD2B_A,GPRC5B,-0.3,44,"cancer pathways, fatty acid degradation",smooth
+528,LGMD2B_A,RPS6KB1,-0.2,21,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+529,LGMD2B_A,PSMA3,-0.4,39,"focal adhesion, pyruvate metabolism",skeletal
+530,LGMD2B_A,JARID2,0.1,49,"focal adhesion, citrate cycle",cardiac
+531,LGMD2B_A,ODF2,-0.1,55,"cancer pathways, apoptosis",smooth
+532,LGMD2B_A,MON2,-0.1,0,"propanoate metabolism, Wnt signalling",smooth
+533,LGMD2B_A,PDLIM2,-0.8,60,"apoptosis, MAPK",smooth
+534,LGMD2B_A,WAC,-0.2,88,"MAPK, focal adhesion",skeletal
+535,LGMD2B_A,FLCN,NA,35,"synthesis and degradation of ketone bodies, cancer pathways",smooth
+536,LGMD2B_A,ATF6,-0.1,78,"cancer pathways, Wnt signalling",smooth
+537,LGMD2B_A,TRAFD1,0.2,75,"Wnt signalling, focal adhesion",smooth
+538,LGMD2B_A,BICD1,NA,83,"apoptosis, focal adhesion",smooth
+539,LGMD2B_A,ANP32A,-0.2,76,"focal adhesion, synthesis and degradation of ketone bodies",skeletal
+540,LGMD2B_A,KDSR,-0.4,73,"propanoate metabolism, citrate cycle",smooth
+541,LGMD2B_A,FBXO9,NA,5,"fatty acid degradation, focal adhesion",smooth
+542,LGMD2B_A,UBQLN2,-0.2,62,"focal adhesion, citrate cycle",cardiac
+543,LGMD2B_A,ZFX,-0.4,83,"focal adhesion, synthesis and degradation of ketone bodies",skeletal
+544,LGMD2B_A,CPLX2,0.2,35,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+545,LGMD2B_A,CLPX,-0.3,62,"MAPK, synthesis and degradation of ketone bodies",skeletal
+546,LGMD2B_A,SGCB,-0.1,85,"propanoate metabolism, citrate cycle",cardiac
+547,LGMD2B_A,SEMA5A,-0.1,16,"MAPK, apoptosis",cardiac
+548,LGMD2B_A,PTPRB,-0.2,32,"cancer pathways, MAPK",cardiac
+549,LGMD2B_A,TMEM33,-0.3,82,"apoptosis, MAPK",smooth
+550,LGMD2B_A,SMC1A,NA,6,"synthesis and degradation of ketone bodies, citrate cycle",skeletal
+551,LGMD2I_A,NF1,0.1,22,"pyruvate metabolism, synthesis and degradation of ketone bodies",smooth
+552,LGMD2I_A,UEVLD,-0.2,18,"apoptosis, citrate cycle",cardiac
+553,LGMD2I_A,CDC37L1,0.2,13,"pyruvate metabolism, citrate cycle",skeletal
+554,LGMD2I_A,HOXD10,0.1,73,"MAPK, fatty acid degradation",cardiac
+555,LGMD2I_A,NNT,-0.3,45,"apoptosis, pyruvate metabolism",smooth
+556,LGMD2I_A,HUWE1,0.1,72,"MAPK, pyruvate metabolism",smooth
+557,LGMD2I_A,GJA5,NA,18,"focal adhesion, apoptosis",smooth
+558,LGMD2I_A,SPCS3,0.3,5,"Wnt signalling, propanoate metabolism",skeletal
+559,LGMD2I_A,DOT1L,0.2,66,"MAPK, focal adhesion",skeletal
+560,LGMD2I_A,ATP6V0E1,0.2,17,"fatty acid degradation, fatty acid degradation",skeletal
+561,LGMD2I_A,XAF1,0.1,96,"synthesis and degradation of ketone bodies, propanoate metabolism",smooth
+562,LGMD2I_A,MAFG,-0.3,89,"focal adhesion, Wnt signalling",skeletal
+563,LGMD2I_A,AAK1,0.1,53,"pyruvate metabolism, synthesis and degradation of ketone bodies",skeletal
+564,LGMD2I_A,TM2D3,NA,28,"citrate cycle, focal adhesion",skeletal
+565,LGMD2I_A,SSR3,-0.1,57,"pyruvate metabolism, apoptosis",smooth
+566,LGMD2I_A,ZNF281,-0.2,83,"focal adhesion, focal adhesion",cardiac
+567,LGMD2I_A,JAM2,0.1,10,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+568,LGMD2I_A,CDC23,0.1,98,"Wnt signalling, focal adhesion",cardiac
+569,LGMD2I_A,PLN,-0.1,89,"fatty acid degradation, apoptosis",cardiac
+570,LGMD2I_A,PGP,0.2,88,"cancer pathways, synthesis and degradation of ketone bodies",skeletal
+571,LGMD2I_A,HYI,0.2,85,"citrate cycle, citrate cycle",smooth
+572,LGMD2I_A,IMPACT,-0.1,14,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+573,LGMD2I_A,C2orf49,-0.3,3,"apoptosis, apoptosis",skeletal
+574,LGMD2I_A,HDAC11,NA,89,"focal adhesion, fatty acid degradation",skeletal
+575,LGMD2I_A,CCN4,-0.2,100,"propanoate metabolism, pyruvate metabolism",skeletal
+576,LGMD2I_A,MKLN1,-0.2,87,"apoptosis, cancer pathways",cardiac
+577,LGMD2I_A,GPRC5B,NA,30,"MAPK, fatty acid degradation",smooth
+578,LGMD2I_A,RPS6KB1,-0.2,15,"pyruvate metabolism, Wnt signalling",skeletal
+579,LGMD2I_A,PSMA3,0.2,78,"cancer pathways, focal adhesion",cardiac
+580,LGMD2I_A,JARID2,-0.1,0,"Wnt signalling, cancer pathways",cardiac
+581,LGMD2I_A,ODF2,-0.1,84,"Wnt signalling, MAPK",cardiac
+582,LGMD2I_A,MON2,-0.3,91,"MAPK, MAPK",skeletal
+583,LGMD2I_A,PDLIM2,-0.4,43,"focal adhesion, fatty acid degradation",smooth
+584,LGMD2I_A,WAC,-0.1,8,"apoptosis, MAPK",smooth
+585,LGMD2I_A,FLCN,NA,69,"pyruvate metabolism, pyruvate metabolism",cardiac
+586,LGMD2I_A,ATF6,NA,93,"propanoate metabolism, focal adhesion",cardiac
+587,LGMD2I_A,TRAFD1,0.3,15,"citrate cycle, synthesis and degradation of ketone bodies",skeletal
+588,LGMD2I_A,BICD1,0.1,7,"MAPK, cancer pathways",skeletal
+589,LGMD2I_A,ANP32A,NA,76,"synthesis and degradation of ketone bodies, focal adhesion",skeletal
+590,LGMD2I_A,KDSR,-0.4,70,"pyruvate metabolism, propanoate metabolism",smooth
+591,LGMD2I_A,FBXO9,NA,95,"Wnt signalling, cancer pathways",cardiac
+592,LGMD2I_A,UBQLN2,-0.2,37,"propanoate metabolism, propanoate metabolism",skeletal
+593,LGMD2I_A,ZFX,-0.3,67,"focal adhesion, fatty acid degradation",cardiac
+594,LGMD2I_A,CPLX2,0.1,17,"focal adhesion, citrate cycle",skeletal
+595,LGMD2I_A,CLPX,-0.1,49,"apoptosis, propanoate metabolism",cardiac
+596,LGMD2I_A,SGCB,-0.2,55,"fatty acid degradation, apoptosis",skeletal
+597,LGMD2I_A,SEMA5A,NA,41,"MAPK, cancer pathways",cardiac
+598,LGMD2I_A,PTPRB,0.1,92,"propanoate metabolism, pyruvate metabolism",smooth
+599,LGMD2I_A,TMEM33,-0.3,15,"fatty acid degradation, Wnt signalling",cardiac
+600,LGMD2I_A,SMC1A,0.1,44,"synthesis and degradation of ketone bodies, focal adhesion",smooth
+601,ALS_B,NF1,0.1,18,"apoptosis, fatty acid degradation",smooth
+602,ALS_B,UEVLD,0.1,22,"focal adhesion, cancer pathways",cardiac
+603,ALS_B,CDC37L1,0.5,91,"citrate cycle, focal adhesion",skeletal
+604,ALS_B,HOXD10,-0.1,28,"fatty acid degradation, propanoate metabolism",skeletal
+605,ALS_B,NNT,NA,41,"citrate cycle, citrate cycle",smooth
+606,ALS_B,HUWE1,0.1,81,"Wnt signalling, cancer pathways",smooth
+607,ALS_B,GJA5,-0.3,39,"focal adhesion, focal adhesion",skeletal
+608,ALS_B,SPCS3,-0.1,96,"synthesis and degradation of ketone bodies, focal adhesion",skeletal
+609,ALS_B,DOT1L,0.2,39,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+610,ALS_B,ATP6V0E1,0.4,73,"citrate cycle, pyruvate metabolism",skeletal
+611,ALS_B,XAF1,0.1,95,"fatty acid degradation, citrate cycle",smooth
+612,ALS_B,MAFG,-0.3,24,"cancer pathways, fatty acid degradation",smooth
+613,ALS_B,AAK1,0.4,13,"focal adhesion, pyruvate metabolism",smooth
+614,ALS_B,TM2D3,0.3,76,"cancer pathways, propanoate metabolism",cardiac
+615,ALS_B,SSR3,0.3,57,"apoptosis, focal adhesion",cardiac
+616,ALS_B,ZNF281,0.4,82,"apoptosis, synthesis and degradation of ketone bodies",smooth
+617,ALS_B,JAM2,0.2,94,"synthesis and degradation of ketone bodies, Wnt signalling",smooth
+618,ALS_B,CDC23,0.1,0,"citrate cycle, Wnt signalling",skeletal
+619,ALS_B,PLN,-0.5,54,"MAPK, MAPK",cardiac
+620,ALS_B,PGP,-0.1,56,"propanoate metabolism, citrate cycle",smooth
+621,ALS_B,HYI,-0.1,45,"propanoate metabolism, pyruvate metabolism",cardiac
+622,ALS_B,IMPACT,0.2,32,"MAPK, Wnt signalling",cardiac
+623,ALS_B,C2orf49,0.3,15,"Wnt signalling, cancer pathways",cardiac
+624,ALS_B,HDAC11,-0.6,46,"Wnt signalling, apoptosis",skeletal
+625,ALS_B,CCN4,-0.2,51,"apoptosis, pyruvate metabolism",cardiac
+626,ALS_B,MKLN1,0.6,80,"synthesis and degradation of ketone bodies, pyruvate metabolism",smooth
+627,ALS_B,GPRC5B,0.3,92,"fatty acid degradation, Wnt signalling",smooth
+628,ALS_B,RPS6KB1,0.6,42,"synthesis and degradation of ketone bodies, cancer pathways",cardiac
+629,ALS_B,PSMA3,-0.1,52,"propanoate metabolism, focal adhesion",skeletal
+630,ALS_B,JARID2,-0.3,93,"fatty acid degradation, cancer pathways",smooth
+631,ALS_B,ODF2,0.3,55,"propanoate metabolism, Wnt signalling",cardiac
+632,ALS_B,MON2,NA,55,"synthesis and degradation of ketone bodies, focal adhesion",smooth
+633,ALS_B,PDLIM2,-0.1,50,"focal adhesion, Wnt signalling",cardiac
+634,ALS_B,WAC,0.5,87,"cancer pathways, apoptosis",smooth
+635,ALS_B,FLCN,-0.2,32,"focal adhesion, citrate cycle",skeletal
+636,ALS_B,ATF6,0.4,57,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+637,ALS_B,TRAFD1,-0.2,63,"citrate cycle, propanoate metabolism",smooth
+638,ALS_B,BICD1,0.9,82,"focal adhesion, pyruvate metabolism",skeletal
+639,ALS_B,ANP32A,-0.2,58,"cancer pathways, Wnt signalling",skeletal
+640,ALS_B,KDSR,0.3,35,"synthesis and degradation of ketone bodies, fatty acid degradation",cardiac
+641,ALS_B,FBXO9,0.1,64,"synthesis and degradation of ketone bodies, MAPK",smooth
+642,ALS_B,UBQLN2,0.3,31,"Wnt signalling, synthesis and degradation of ketone bodies",cardiac
+643,ALS_B,ZFX,0.5,15,"synthesis and degradation of ketone bodies, propanoate metabolism",cardiac
+644,ALS_B,CPLX2,-0.3,64,"fatty acid degradation, fatty acid degradation",smooth
+645,ALS_B,CLPX,0.4,56,"Wnt signalling, MAPK",smooth
+646,ALS_B,SGCB,0.5,79,"pyruvate metabolism, propanoate metabolism",cardiac
+647,ALS_B,SEMA5A,NA,94,"fatty acid degradation, apoptosis",cardiac
+648,ALS_B,PTPRB,0.3,63,"pyruvate metabolism, propanoate metabolism",smooth
+649,ALS_B,TMEM33,0.7,5,"Wnt signalling, focal adhesion",smooth
+650,ALS_B,SMC1A,0.1,72,"MAPK, citrate cycle",skeletal
+651,AQM_B,NF1,-0.1,72,"synthesis and degradation of ketone bodies, fatty acid degradation",skeletal
+652,AQM_B,UEVLD,0.2,50,"cancer pathways, synthesis and degradation of ketone bodies",cardiac
+653,AQM_B,CDC37L1,0.2,70,"focal adhesion, synthesis and degradation of ketone bodies",smooth
+654,AQM_B,HOXD10,NA,75,"fatty acid degradation, apoptosis",smooth
+655,AQM_B,NNT,-0.5,14,"MAPK, focal adhesion",skeletal
+656,AQM_B,HUWE1,0.2,52,"apoptosis, pyruvate metabolism",skeletal
+657,AQM_B,GJA5,-0.2,20,"pyruvate metabolism, fatty acid degradation",skeletal
+658,AQM_B,SPCS3,0.4,74,"focal adhesion, propanoate metabolism",smooth
+659,AQM_B,DOT1L,NA,67,"apoptosis, synthesis and degradation of ketone bodies",cardiac
+660,AQM_B,ATP6V0E1,0.8,33,"cancer pathways, MAPK",smooth
+661,AQM_B,XAF1,0.1,43,"cancer pathways, synthesis and degradation of ketone bodies",cardiac
+662,AQM_B,MAFG,NA,81,"apoptosis, focal adhesion",cardiac
+663,AQM_B,AAK1,0.9,23,"pyruvate metabolism, fatty acid degradation",skeletal
+664,AQM_B,TM2D3,NA,24,"cancer pathways, cancer pathways",smooth
+665,AQM_B,SSR3,0.7,94,"citrate cycle, fatty acid degradation",smooth
+666,AQM_B,ZNF281,0.4,96,"fatty acid degradation, focal adhesion",skeletal
+667,AQM_B,JAM2,-0.1,92,"pyruvate metabolism, focal adhesion",cardiac
+668,AQM_B,CDC23,0.2,90,"focal adhesion, propanoate metabolism",cardiac
+669,AQM_B,PLN,-1.3,61,"synthesis and degradation of ketone bodies, apoptosis",smooth
+670,AQM_B,PGP,-0.7,42,"propanoate metabolism, Wnt signalling",cardiac
+671,AQM_B,HYI,-0.1,60,"focal adhesion, focal adhesion",cardiac
+672,AQM_B,IMPACT,0.6,38,"citrate cycle, Wnt signalling",cardiac
+673,AQM_B,C2orf49,0.4,62,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+674,AQM_B,HDAC11,-0.6,72,"citrate cycle, Wnt signalling",smooth
+675,AQM_B,CCN4,-0.3,39,"Wnt signalling, cancer pathways",smooth
+676,AQM_B,MKLN1,1.1,51,"focal adhesion, cancer pathways",skeletal
+677,AQM_B,GPRC5B,-0.3,56,"pyruvate metabolism, propanoate metabolism",skeletal
+678,AQM_B,RPS6KB1,0.8,12,"citrate cycle, Wnt signalling",smooth
+679,AQM_B,PSMA3,-0.2,63,"Wnt signalling, citrate cycle",smooth
+680,AQM_B,JARID2,-0.3,96,"Wnt signalling, propanoate metabolism",cardiac
+681,AQM_B,ODF2,0.6,73,"pyruvate metabolism, apoptosis",skeletal
+682,AQM_B,MON2,-0.2,22,"MAPK, apoptosis",cardiac
+683,AQM_B,PDLIM2,-0.1,2,"pyruvate metabolism, MAPK",cardiac
+684,AQM_B,WAC,1,37,"synthesis and degradation of ketone bodies, pyruvate metabolism",smooth
+685,AQM_B,FLCN,0.1,15,"apoptosis, MAPK",smooth
+686,AQM_B,ATF6,0.4,55,"cancer pathways, synthesis and degradation of ketone bodies",skeletal
+687,AQM_B,TRAFD1,-0.1,28,"MAPK, apoptosis",smooth
+688,AQM_B,BICD1,0.2,77,"pyruvate metabolism, fatty acid degradation",cardiac
+689,AQM_B,ANP32A,NA,36,"cancer pathways, focal adhesion",cardiac
+690,AQM_B,KDSR,0.6,60,"citrate cycle, MAPK",cardiac
+691,AQM_B,FBXO9,-0.3,73,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+692,AQM_B,UBQLN2,0.2,93,"apoptosis, pyruvate metabolism",smooth
+693,AQM_B,ZFX,0.5,56,"apoptosis, citrate cycle",smooth
+694,AQM_B,CPLX2,NA,31,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+695,AQM_B,CLPX,0.2,13,"propanoate metabolism, propanoate metabolism",cardiac
+696,AQM_B,SGCB,0.2,91,"apoptosis, MAPK",cardiac
+697,AQM_B,SEMA5A,-0.2,50,"fatty acid degradation, synthesis and degradation of ketone bodies",cardiac
+698,AQM_B,PTPRB,NA,30,"apoptosis, fatty acid degradation",cardiac
+699,AQM_B,TMEM33,0.8,90,"Wnt signalling, apoptosis",cardiac
+700,AQM_B,SMC1A,0.1,70,"apoptosis, propanoate metabolism",skeletal
+701,BMD_B,NF1,NA,64,"citrate cycle, Wnt signalling",smooth
+702,BMD_B,UEVLD,0.1,33,"apoptosis, pyruvate metabolism",smooth
+703,BMD_B,CDC37L1,0.2,55,"citrate cycle, MAPK",skeletal
+704,BMD_B,HOXD10,-0.2,86,"synthesis and degradation of ketone bodies, apoptosis",skeletal
+705,BMD_B,NNT,-0.8,50,"citrate cycle, MAPK",smooth
+706,BMD_B,HUWE1,NA,56,"Wnt signalling, citrate cycle",skeletal
+707,BMD_B,GJA5,0.3,96,"synthesis and degradation of ketone bodies, Wnt signalling",cardiac
+708,BMD_B,SPCS3,0.2,13,"pyruvate metabolism, Wnt signalling",skeletal
+709,BMD_B,DOT1L,0.1,75,"fatty acid degradation, focal adhesion",smooth
+710,BMD_B,ATP6V0E1,0.5,53,"Wnt signalling, MAPK",cardiac
+711,BMD_B,XAF1,-0.1,50,"cancer pathways, cancer pathways",cardiac
+712,BMD_B,MAFG,0.2,74,"Wnt signalling, pyruvate metabolism",smooth
+713,BMD_B,AAK1,0.5,28,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",smooth
+714,BMD_B,TM2D3,0.1,29,"Wnt signalling, synthesis and degradation of ketone bodies",smooth
+715,BMD_B,SSR3,0.1,75,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+716,BMD_B,ZNF281,-0.1,15,"citrate cycle, citrate cycle",smooth
+717,BMD_B,JAM2,0.3,98,"apoptosis, propanoate metabolism",cardiac
+718,BMD_B,CDC23,NA,93,"cancer pathways, cancer pathways",smooth
+719,BMD_B,PLN,-1.1,52,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+720,BMD_B,PGP,-0.4,67,"cancer pathways, Wnt signalling",skeletal
+721,BMD_B,HYI,0.1,10,"MAPK, focal adhesion",smooth
+722,BMD_B,IMPACT,-0.1,43,"Wnt signalling, synthesis and degradation of ketone bodies",cardiac
+723,BMD_B,C2orf49,-0.2,45,"cancer pathways, Wnt signalling",smooth
+724,BMD_B,HDAC11,-0.2,56,"propanoate metabolism, fatty acid degradation",skeletal
+725,BMD_B,CCN4,-0.1,81,"Wnt signalling, cancer pathways",cardiac
+726,BMD_B,MKLN1,-0.4,14,"Wnt signalling, fatty acid degradation",cardiac
+727,BMD_B,GPRC5B,0.3,78,"Wnt signalling, propanoate metabolism",skeletal
+728,BMD_B,RPS6KB1,-0.3,2,"propanoate metabolism, synthesis and degradation of ketone bodies",skeletal
+729,BMD_B,PSMA3,-0.2,88,"fatty acid degradation, MAPK",cardiac
+730,BMD_B,JARID2,-0.1,58,"cancer pathways, propanoate metabolism",skeletal
+731,BMD_B,ODF2,0.2,70,"synthesis and degradation of ketone bodies, cancer pathways",skeletal
+732,BMD_B,MON2,NA,25,"Wnt signalling, cancer pathways",cardiac
+733,BMD_B,PDLIM2,0.1,45,"propanoate metabolism, cancer pathways",skeletal
+734,BMD_B,WAC,-0.1,94,"Wnt signalling, pyruvate metabolism",cardiac
+735,BMD_B,FLCN,-0.1,24,"MAPK, citrate cycle",smooth
+736,BMD_B,ATF6,0.4,40,"Wnt signalling, propanoate metabolism",skeletal
+737,BMD_B,TRAFD1,-0.2,38,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+738,BMD_B,BICD1,0.7,33,"MAPK, cancer pathways",skeletal
+739,BMD_B,ANP32A,0.1,91,"fatty acid degradation, Wnt signalling",skeletal
+740,BMD_B,KDSR,0.3,45,"cancer pathways, focal adhesion",cardiac
+741,BMD_B,FBXO9,NA,76,"propanoate metabolism, synthesis and degradation of ketone bodies",smooth
+742,BMD_B,UBQLN2,NA,93,"Wnt signalling, pyruvate metabolism",smooth
+743,BMD_B,ZFX,-0.1,70,"focal adhesion, apoptosis",smooth
+744,BMD_B,CPLX2,NA,31,"MAPK, propanoate metabolism",cardiac
+745,BMD_B,CLPX,-0.2,66,"focal adhesion, cancer pathways",cardiac
+746,BMD_B,SGCB,NA,92,"Wnt signalling, apoptosis",skeletal
+747,BMD_B,SEMA5A,-0.1,12,"focal adhesion, fatty acid degradation",skeletal
+748,BMD_B,PTPRB,0.2,88,"focal adhesion, fatty acid degradation",skeletal
+749,BMD_B,TMEM33,0.2,6,"fatty acid degradation, pyruvate metabolism",skeletal
+750,BMD_B,SMC1A,-0.2,60,"propanoate metabolism, propanoate metabolism",smooth
+751,DMD_B,NF1,0.1,92,"MAPK, cancer pathways",cardiac
+752,DMD_B,UEVLD,0.1,88,"pyruvate metabolism, focal adhesion",cardiac
+753,DMD_B,CDC37L1,-0.4,17,"pyruvate metabolism, synthesis and degradation of ketone bodies",skeletal
+754,DMD_B,HOXD10,-0.1,94,"focal adhesion, citrate cycle",smooth
+755,DMD_B,NNT,-0.6,76,"apoptosis, fatty acid degradation",cardiac
+756,DMD_B,HUWE1,NA,4,"fatty acid degradation, focal adhesion",smooth
+757,DMD_B,GJA5,0.1,78,"MAPK, propanoate metabolism",smooth
+758,DMD_B,SPCS3,0.2,35,"pyruvate metabolism, propanoate metabolism",cardiac
+759,DMD_B,DOT1L,NA,50,"fatty acid degradation, citrate cycle",cardiac
+760,DMD_B,ATP6V0E1,0.6,66,"focal adhesion, cancer pathways",cardiac
+761,DMD_B,XAF1,0.7,83,"apoptosis, MAPK",cardiac
+762,DMD_B,MAFG,-0.2,68,"fatty acid degradation, pyruvate metabolism",cardiac
+763,DMD_B,AAK1,0.4,73,"cancer pathways, Wnt signalling",skeletal
+764,DMD_B,TM2D3,NA,22,"citrate cycle, synthesis and degradation of ketone bodies",smooth
+765,DMD_B,SSR3,0.4,53,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+766,DMD_B,ZNF281,NA,1,"focal adhesion, MAPK",smooth
+767,DMD_B,JAM2,1.1,76,"apoptosis, focal adhesion",skeletal
+768,DMD_B,CDC23,0.2,41,"fatty acid degradation, propanoate metabolism",smooth
+769,DMD_B,PLN,-0.7,30,"citrate cycle, pyruvate metabolism",smooth
+770,DMD_B,PGP,-0.9,39,"pyruvate metabolism, citrate cycle",cardiac
+771,DMD_B,HYI,-0.1,1,"MAPK, Wnt signalling",smooth
+772,DMD_B,IMPACT,0.1,52,"Wnt signalling, cancer pathways",cardiac
+773,DMD_B,C2orf49,NA,28,"citrate cycle, cancer pathways",cardiac
+774,DMD_B,HDAC11,-0.3,87,"apoptosis, propanoate metabolism",smooth
+775,DMD_B,CCN4,NA,49,"citrate cycle, cancer pathways",skeletal
+776,DMD_B,MKLN1,0.2,48,"MAPK, apoptosis",skeletal
+777,DMD_B,GPRC5B,NA,31,"apoptosis, fatty acid degradation",smooth
+778,DMD_B,RPS6KB1,0.1,97,"citrate cycle, apoptosis",skeletal
+779,DMD_B,PSMA3,-0.2,1,"MAPK, citrate cycle",skeletal
+780,DMD_B,JARID2,-0.3,35,"Wnt signalling, Wnt signalling",skeletal
+781,DMD_B,ODF2,0.4,100,"fatty acid degradation, apoptosis",skeletal
+782,DMD_B,MON2,NA,44,"pyruvate metabolism, citrate cycle",skeletal
+783,DMD_B,PDLIM2,-0.1,2,"focal adhesion, apoptosis",smooth
+784,DMD_B,WAC,0.5,20,"cancer pathways, Wnt signalling",smooth
+785,DMD_B,FLCN,-0.1,71,"Wnt signalling, focal adhesion",smooth
+786,DMD_B,ATF6,0.5,24,"citrate cycle, propanoate metabolism",smooth
+787,DMD_B,TRAFD1,-0.2,85,"cancer pathways, synthesis and degradation of ketone bodies",skeletal
+788,DMD_B,BICD1,0.5,38,"fatty acid degradation, cancer pathways",skeletal
+789,DMD_B,ANP32A,NA,4,"citrate cycle, propanoate metabolism",cardiac
+790,DMD_B,KDSR,0.6,86,"Wnt signalling, Wnt signalling",cardiac
+791,DMD_B,FBXO9,0.1,31,"fatty acid degradation, fatty acid degradation",smooth
+792,DMD_B,UBQLN2,0.1,33,"apoptosis, focal adhesion",smooth
+793,DMD_B,ZFX,NA,95,"apoptosis, MAPK",skeletal
+794,DMD_B,CPLX2,-0.1,30,"fatty acid degradation, propanoate metabolism",smooth
+795,DMD_B,CLPX,-0.2,44,"pyruvate metabolism, Wnt signalling",smooth
+796,DMD_B,SGCB,-0.2,13,"cancer pathways, synthesis and degradation of ketone bodies",skeletal
+797,DMD_B,SEMA5A,0.1,57,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+798,DMD_B,PTPRB,0.3,78,"pyruvate metabolism, fatty acid degradation",skeletal
+799,DMD_B,TMEM33,0.4,87,"fatty acid degradation, apoptosis",smooth
+800,DMD_B,SMC1A,-0.1,96,"citrate cycle, MAPK",smooth
+801,EDMD.AD_B,NF1,0.2,3,"Wnt signalling, apoptosis",cardiac
+802,EDMD.AD_B,UEVLD,0.1,47,"Wnt signalling, Wnt signalling",smooth
+803,EDMD.AD_B,CDC37L1,0.4,46,"propanoate metabolism, apoptosis",skeletal
+804,EDMD.AD_B,HOXD10,-0.1,13,"Wnt signalling, fatty acid degradation",skeletal
+805,EDMD.AD_B,NNT,-0.2,0,"cancer pathways, cancer pathways",smooth
+806,EDMD.AD_B,HUWE1,NA,82,"pyruvate metabolism, propanoate metabolism",smooth
+807,EDMD.AD_B,GJA5,-0.1,51,"MAPK, Wnt signalling",cardiac
+808,EDMD.AD_B,SPCS3,NA,81,"pyruvate metabolism, synthesis and degradation of ketone bodies",skeletal
+809,EDMD.AD_B,DOT1L,0.2,93,"Wnt signalling, citrate cycle",skeletal
+810,EDMD.AD_B,ATP6V0E1,0.8,22,"fatty acid degradation, MAPK",smooth
+811,EDMD.AD_B,XAF1,0.3,75,"Wnt signalling, apoptosis",skeletal
+812,EDMD.AD_B,MAFG,-0.3,23,"Wnt signalling, pyruvate metabolism",skeletal
+813,EDMD.AD_B,AAK1,0.5,87,"synthesis and degradation of ketone bodies, Wnt signalling",skeletal
+814,EDMD.AD_B,TM2D3,NA,27,"fatty acid degradation, focal adhesion",skeletal
+815,EDMD.AD_B,SSR3,0.3,85,"focal adhesion, focal adhesion",skeletal
+816,EDMD.AD_B,ZNF281,0.2,5,"focal adhesion, apoptosis",skeletal
+817,EDMD.AD_B,JAM2,0.7,68,"focal adhesion, cancer pathways",skeletal
+818,EDMD.AD_B,CDC23,0.4,74,"focal adhesion, MAPK",skeletal
+819,EDMD.AD_B,PLN,-0.6,29,"citrate cycle, cancer pathways",skeletal
+820,EDMD.AD_B,PGP,-0.7,74,"apoptosis, MAPK",cardiac
+821,EDMD.AD_B,HYI,NA,77,"fatty acid degradation, citrate cycle",smooth
+822,EDMD.AD_B,IMPACT,NA,91,"Wnt signalling, synthesis and degradation of ketone bodies",smooth
+823,EDMD.AD_B,C2orf49,0.1,87,"fatty acid degradation, apoptosis",skeletal
+824,EDMD.AD_B,HDAC11,-0.5,49,"cancer pathways, cancer pathways",skeletal
+825,EDMD.AD_B,CCN4,NA,93,"fatty acid degradation, Wnt signalling",smooth
+826,EDMD.AD_B,MKLN1,0.6,21,"MAPK, fatty acid degradation",smooth
+827,EDMD.AD_B,GPRC5B,-0.3,56,"focal adhesion, MAPK",skeletal
+828,EDMD.AD_B,RPS6KB1,0.3,83,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+829,EDMD.AD_B,PSMA3,0.1,59,"propanoate metabolism, focal adhesion",smooth
+830,EDMD.AD_B,JARID2,-0.2,54,"apoptosis, fatty acid degradation",skeletal
+831,EDMD.AD_B,ODF2,0.4,72,"MAPK, citrate cycle",cardiac
+832,EDMD.AD_B,MON2,NA,11,"fatty acid degradation, Wnt signalling",cardiac
+833,EDMD.AD_B,PDLIM2,-0.2,29,"focal adhesion, fatty acid degradation",cardiac
+834,EDMD.AD_B,WAC,0.6,12,"Wnt signalling, citrate cycle",cardiac
+835,EDMD.AD_B,FLCN,-0.2,45,"cancer pathways, apoptosis",skeletal
+836,EDMD.AD_B,ATF6,0.5,15,"propanoate metabolism, MAPK",cardiac
+837,EDMD.AD_B,TRAFD1,0.1,87,"propanoate metabolism, apoptosis",smooth
+838,EDMD.AD_B,BICD1,0.7,70,"citrate cycle, apoptosis",cardiac
+839,EDMD.AD_B,ANP32A,-0.1,94,"pyruvate metabolism, Wnt signalling",cardiac
+840,EDMD.AD_B,KDSR,0.8,70,"pyruvate metabolism, apoptosis",smooth
+841,EDMD.AD_B,FBXO9,NA,13,"focal adhesion, synthesis and degradation of ketone bodies",skeletal
+842,EDMD.AD_B,UBQLN2,NA,79,"propanoate metabolism, propanoate metabolism",skeletal
+843,EDMD.AD_B,ZFX,0.3,50,"focal adhesion, Wnt signalling",skeletal
+844,EDMD.AD_B,CPLX2,-0.2,21,"cancer pathways, propanoate metabolism",skeletal
+845,EDMD.AD_B,CLPX,NA,37,"fatty acid degradation, MAPK",cardiac
+846,EDMD.AD_B,SGCB,-0.1,21,"citrate cycle, citrate cycle",smooth
+847,EDMD.AD_B,SEMA5A,0.2,5,"fatty acid degradation, Wnt signalling",cardiac
+848,EDMD.AD_B,PTPRB,0.3,83,"propanoate metabolism, Wnt signalling",cardiac
+849,EDMD.AD_B,TMEM33,0.6,40,"fatty acid degradation, cancer pathways",skeletal
+850,EDMD.AD_B,SMC1A,NA,97,"synthesis and degradation of ketone bodies, focal adhesion",smooth
+851,EDMD.XR_B,NF1,NA,68,"focal adhesion, MAPK",cardiac
+852,EDMD.XR_B,UEVLD,NA,39,"synthesis and degradation of ketone bodies, cancer pathways",cardiac
+853,EDMD.XR_B,CDC37L1,0.6,70,"apoptosis, apoptosis",cardiac
+854,EDMD.XR_B,HOXD10,NA,73,"pyruvate metabolism, pyruvate metabolism",smooth
+855,EDMD.XR_B,NNT,0.2,26,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+856,EDMD.XR_B,HUWE1,NA,92,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+857,EDMD.XR_B,GJA5,-0.2,49,"citrate cycle, MAPK",skeletal
+858,EDMD.XR_B,SPCS3,0.2,38,"pyruvate metabolism, citrate cycle",smooth
+859,EDMD.XR_B,DOT1L,NA,2,"fatty acid degradation, focal adhesion",smooth
+860,EDMD.XR_B,ATP6V0E1,0.5,80,"Wnt signalling, focal adhesion",skeletal
+861,EDMD.XR_B,XAF1,0.1,16,"synthesis and degradation of ketone bodies, citrate cycle",skeletal
+862,EDMD.XR_B,MAFG,NA,64,"pyruvate metabolism, Wnt signalling",smooth
+863,EDMD.XR_B,AAK1,0.5,73,"MAPK, fatty acid degradation",skeletal
+864,EDMD.XR_B,TM2D3,0.3,78,"fatty acid degradation, propanoate metabolism",cardiac
+865,EDMD.XR_B,SSR3,NA,32,"pyruvate metabolism, fatty acid degradation",cardiac
+866,EDMD.XR_B,ZNF281,0.3,17,"focal adhesion, synthesis and degradation of ketone bodies",skeletal
+867,EDMD.XR_B,JAM2,NA,61,"citrate cycle, apoptosis",skeletal
+868,EDMD.XR_B,CDC23,NA,43,"cancer pathways, apoptosis",skeletal
+869,EDMD.XR_B,PLN,NA,88,"focal adhesion, citrate cycle",smooth
+870,EDMD.XR_B,PGP,-0.1,57,"fatty acid degradation, cancer pathways",smooth
+871,EDMD.XR_B,HYI,-0.2,28,"apoptosis, focal adhesion",cardiac
+872,EDMD.XR_B,IMPACT,-0.1,25,"cancer pathways, MAPK",skeletal
+873,EDMD.XR_B,C2orf49,0.2,15,"pyruvate metabolism, propanoate metabolism",smooth
+874,EDMD.XR_B,HDAC11,-0.1,81,"propanoate metabolism, synthesis and degradation of ketone bodies",smooth
+875,EDMD.XR_B,CCN4,NA,28,"synthesis and degradation of ketone bodies, MAPK",smooth
+876,EDMD.XR_B,MKLN1,0.3,99,"pyruvate metabolism, propanoate metabolism",smooth
+877,EDMD.XR_B,GPRC5B,0.1,78,"Wnt signalling, fatty acid degradation",smooth
+878,EDMD.XR_B,RPS6KB1,0.2,58,"pyruvate metabolism, apoptosis",skeletal
+879,EDMD.XR_B,PSMA3,NA,92,"MAPK, cancer pathways",smooth
+880,EDMD.XR_B,JARID2,-0.3,37,"focal adhesion, apoptosis",smooth
+881,EDMD.XR_B,ODF2,NA,54,"Wnt signalling, pyruvate metabolism",cardiac
+882,EDMD.XR_B,MON2,NA,88,"focal adhesion, cancer pathways",skeletal
+883,EDMD.XR_B,PDLIM2,-0.2,53,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+884,EDMD.XR_B,WAC,0.2,17,"synthesis and degradation of ketone bodies, cancer pathways",smooth
+885,EDMD.XR_B,FLCN,-0.2,96,"propanoate metabolism, fatty acid degradation",skeletal
+886,EDMD.XR_B,ATF6,0.4,61,"fatty acid degradation, apoptosis",skeletal
+887,EDMD.XR_B,TRAFD1,NA,23,"propanoate metabolism, apoptosis",smooth
+888,EDMD.XR_B,BICD1,0.6,1,"propanoate metabolism, citrate cycle",cardiac
+889,EDMD.XR_B,ANP32A,-0.2,100,"propanoate metabolism, propanoate metabolism",cardiac
+890,EDMD.XR_B,KDSR,0.2,67,"MAPK, Wnt signalling",cardiac
+891,EDMD.XR_B,FBXO9,0.2,81,"fatty acid degradation, pyruvate metabolism",skeletal
+892,EDMD.XR_B,UBQLN2,NA,6,"citrate cycle, pyruvate metabolism",skeletal
+893,EDMD.XR_B,ZFX,0.2,98,"apoptosis, Wnt signalling",smooth
+894,EDMD.XR_B,CPLX2,NA,48,"focal adhesion, MAPK",smooth
+895,EDMD.XR_B,CLPX,0.2,42,"Wnt signalling, MAPK",smooth
+896,EDMD.XR_B,SGCB,0.1,92,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+897,EDMD.XR_B,SEMA5A,NA,16,"fatty acid degradation, MAPK",cardiac
+898,EDMD.XR_B,PTPRB,-0.1,25,"propanoate metabolism, cancer pathways",cardiac
+899,EDMD.XR_B,TMEM33,0.4,89,"citrate cycle, focal adhesion",cardiac
+900,EDMD.XR_B,SMC1A,NA,85,"Wnt signalling, synthesis and degradation of ketone bodies",skeletal
+901,FSHD_B,NF1,NA,62,"Wnt signalling, fatty acid degradation",skeletal
+902,FSHD_B,UEVLD,0.5,44,"citrate cycle, cancer pathways",skeletal
+903,FSHD_B,CDC37L1,0.4,54,"pyruvate metabolism, apoptosis",cardiac
+904,FSHD_B,HOXD10,-0.1,85,"synthesis and degradation of ketone bodies, propanoate metabolism",smooth
+905,FSHD_B,NNT,0.3,15,"focal adhesion, propanoate metabolism",skeletal
+906,FSHD_B,HUWE1,0.1,45,"focal adhesion, cancer pathways",smooth
+907,FSHD_B,GJA5,-0.2,32,"pyruvate metabolism, citrate cycle",skeletal
+908,FSHD_B,SPCS3,NA,43,"Wnt signalling, apoptosis",smooth
+909,FSHD_B,DOT1L,0.4,92,"fatty acid degradation, propanoate metabolism",cardiac
+910,FSHD_B,ATP6V0E1,0.7,85,"focal adhesion, Wnt signalling",cardiac
+911,FSHD_B,XAF1,0.5,97,"citrate cycle, apoptosis",cardiac
+912,FSHD_B,MAFG,-0.2,44,"synthesis and degradation of ketone bodies, propanoate metabolism",skeletal
+913,FSHD_B,AAK1,0.6,52,"fatty acid degradation, MAPK",skeletal
+914,FSHD_B,TM2D3,0.2,94,"Wnt signalling, propanoate metabolism",skeletal
+915,FSHD_B,SSR3,0.5,35,"citrate cycle, Wnt signalling",cardiac
+916,FSHD_B,ZNF281,0.4,38,"fatty acid degradation, citrate cycle",cardiac
+917,FSHD_B,JAM2,0.6,56,"cancer pathways, focal adhesion",cardiac
+918,FSHD_B,CDC23,0.1,22,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+919,FSHD_B,PLN,0.2,29,"citrate cycle, propanoate metabolism",cardiac
+920,FSHD_B,PGP,0.1,41,"synthesis and degradation of ketone bodies, citrate cycle",skeletal
+921,FSHD_B,HYI,NA,30,"apoptosis, citrate cycle",smooth
+922,FSHD_B,IMPACT,0.2,88,"cancer pathways, Wnt signalling",skeletal
+923,FSHD_B,C2orf49,0.6,70,"citrate cycle, cancer pathways",smooth
+924,FSHD_B,HDAC11,NA,1,"pyruvate metabolism, focal adhesion",skeletal
+925,FSHD_B,CCN4,-0.3,59,"fatty acid degradation, synthesis and degradation of ketone bodies",smooth
+926,FSHD_B,MKLN1,0.6,16,"focal adhesion, apoptosis",skeletal
+927,FSHD_B,GPRC5B,0.4,5,"Wnt signalling, fatty acid degradation",skeletal
+928,FSHD_B,RPS6KB1,0.5,15,"focal adhesion, synthesis and degradation of ketone bodies",smooth
+929,FSHD_B,PSMA3,NA,6,"pyruvate metabolism, apoptosis",skeletal
+930,FSHD_B,JARID2,-0.1,48,"propanoate metabolism, MAPK",cardiac
+931,FSHD_B,ODF2,0.1,82,"focal adhesion, Wnt signalling",cardiac
+932,FSHD_B,MON2,-0.1,99,"apoptosis, synthesis and degradation of ketone bodies",smooth
+933,FSHD_B,PDLIM2,-0.1,22,"cancer pathways, synthesis and degradation of ketone bodies",skeletal
+934,FSHD_B,WAC,0.8,79,"pyruvate metabolism, cancer pathways",smooth
+935,FSHD_B,FLCN,-0.2,64,"cancer pathways, MAPK",cardiac
+936,FSHD_B,ATF6,0.5,24,"focal adhesion, apoptosis",smooth
+937,FSHD_B,TRAFD1,-0.1,5,"Wnt signalling, citrate cycle",cardiac
+938,FSHD_B,BICD1,0.4,48,"fatty acid degradation, citrate cycle",cardiac
+939,FSHD_B,ANP32A,NA,5,"MAPK, propanoate metabolism",skeletal
+940,FSHD_B,KDSR,0.9,70,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+941,FSHD_B,FBXO9,-0.1,1,"MAPK, apoptosis",smooth
+942,FSHD_B,UBQLN2,0.3,9,"apoptosis, pyruvate metabolism",smooth
+943,FSHD_B,ZFX,0.4,47,"cancer pathways, MAPK",smooth
+944,FSHD_B,CPLX2,-0.2,45,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+945,FSHD_B,CLPX,0.2,32,"citrate cycle, cancer pathways",cardiac
+946,FSHD_B,SGCB,0.3,71,"cancer pathways, fatty acid degradation",skeletal
+947,FSHD_B,SEMA5A,-0.1,75,"focal adhesion, citrate cycle",skeletal
+948,FSHD_B,PTPRB,0.6,57,"synthesis and degradation of ketone bodies, pyruvate metabolism",skeletal
+949,FSHD_B,TMEM33,0.4,100,"focal adhesion, apoptosis",smooth
+950,FSHD_B,SMC1A,-0.1,49,"citrate cycle, focal adhesion",cardiac
+951,HSP_B,NF1,NA,51,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",skeletal
+952,HSP_B,UEVLD,NA,48,"Wnt signalling, apoptosis",cardiac
+953,HSP_B,CDC37L1,-0.8,99,"fatty acid degradation, pyruvate metabolism",smooth
+954,HSP_B,HOXD10,NA,63,"citrate cycle, Wnt signalling",cardiac
+955,HSP_B,NNT,-0.8,64,"propanoate metabolism, pyruvate metabolism",smooth
+956,HSP_B,HUWE1,NA,100,"Wnt signalling, citrate cycle",smooth
+957,HSP_B,GJA5,0.3,42,"citrate cycle, focal adhesion",smooth
+958,HSP_B,SPCS3,NA,100,"Wnt signalling, Wnt signalling",skeletal
+959,HSP_B,DOT1L,NA,39,"focal adhesion, focal adhesion",skeletal
+960,HSP_B,ATP6V0E1,-0.4,54,"focal adhesion, propanoate metabolism",cardiac
+961,HSP_B,XAF1,-0.3,66,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+962,HSP_B,MAFG,0.4,85,"Wnt signalling, apoptosis",smooth
+963,HSP_B,AAK1,-0.1,48,"Wnt signalling, fatty acid degradation",cardiac
+964,HSP_B,TM2D3,-0.2,94,"fatty acid degradation, apoptosis",cardiac
+965,HSP_B,SSR3,-0.4,4,"synthesis and degradation of ketone bodies, cancer pathways",skeletal
+966,HSP_B,ZNF281,-0.2,60,"cancer pathways, Wnt signalling",cardiac
+967,HSP_B,JAM2,-0.4,69,"MAPK, citrate cycle",skeletal
+968,HSP_B,CDC23,NA,73,"MAPK, citrate cycle",smooth
+969,HSP_B,PLN,-0.7,18,"pyruvate metabolism, focal adhesion",cardiac
+970,HSP_B,PGP,0.3,0,"pyruvate metabolism, propanoate metabolism",cardiac
+971,HSP_B,HYI,0.5,72,"MAPK, propanoate metabolism",smooth
+972,HSP_B,IMPACT,-0.6,26,"MAPK, MAPK",smooth
+973,HSP_B,C2orf49,0.1,65,"apoptosis, focal adhesion",cardiac
+974,HSP_B,HDAC11,0.6,44,"Wnt signalling, citrate cycle",skeletal
+975,HSP_B,CCN4,NA,69,"pyruvate metabolism, MAPK",skeletal
+976,HSP_B,MKLN1,-0.7,72,"propanoate metabolism, synthesis and degradation of ketone bodies",skeletal
+977,HSP_B,GPRC5B,-0.1,29,"apoptosis, synthesis and degradation of ketone bodies",skeletal
+978,HSP_B,RPS6KB1,-0.8,23,"synthesis and degradation of ketone bodies, apoptosis",smooth
+979,HSP_B,PSMA3,NA,91,"cancer pathways, MAPK",cardiac
+980,HSP_B,JARID2,-0.1,66,"apoptosis, synthesis and degradation of ketone bodies",smooth
+981,HSP_B,ODF2,NA,38,"propanoate metabolism, cancer pathways",skeletal
+982,HSP_B,MON2,NA,69,"MAPK, focal adhesion",cardiac
+983,HSP_B,PDLIM2,NA,0,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+984,HSP_B,WAC,-0.4,57,"fatty acid degradation, citrate cycle",cardiac
+985,HSP_B,FLCN,0.3,31,"cancer pathways, apoptosis",smooth
+986,HSP_B,ATF6,-0.2,98,"fatty acid degradation, MAPK",cardiac
+987,HSP_B,TRAFD1,NA,77,"synthesis and degradation of ketone bodies, citrate cycle",skeletal
+988,HSP_B,BICD1,-0.3,6,"citrate cycle, citrate cycle",smooth
+989,HSP_B,ANP32A,0.3,90,"Wnt signalling, pyruvate metabolism",skeletal
+990,HSP_B,KDSR,-0.2,8,"propanoate metabolism, MAPK",cardiac
+991,HSP_B,FBXO9,-0.3,60,"cancer pathways, synthesis and degradation of ketone bodies",smooth
+992,HSP_B,UBQLN2,NA,28,"pyruvate metabolism, propanoate metabolism",cardiac
+993,HSP_B,ZFX,-0.2,76,"apoptosis, apoptosis",cardiac
+994,HSP_B,CPLX2,NA,86,"synthesis and degradation of ketone bodies, apoptosis",skeletal
+995,HSP_B,CLPX,-0.3,94,"Wnt signalling, propanoate metabolism",smooth
+996,HSP_B,SGCB,-0.1,21,"synthesis and degradation of ketone bodies, apoptosis",skeletal
+997,HSP_B,SEMA5A,NA,80,"synthesis and degradation of ketone bodies, apoptosis",smooth
+998,HSP_B,PTPRB,-0.5,58,"focal adhesion, propanoate metabolism",cardiac
+999,HSP_B,TMEM33,-0.3,11,"focal adhesion, synthesis and degradation of ketone bodies",cardiac
+1000,HSP_B,SMC1A,NA,31,"pyruvate metabolism, propanoate metabolism",cardiac
+1001,JDM_B,NF1,0.1,42,"propanoate metabolism, synthesis and degradation of ketone bodies",skeletal
+1002,JDM_B,UEVLD,0.3,54,"Wnt signalling, cancer pathways",skeletal
+1003,JDM_B,CDC37L1,0.5,4,"MAPK, focal adhesion",cardiac
+1004,JDM_B,HOXD10,NA,86,"fatty acid degradation, focal adhesion",smooth
+1005,JDM_B,NNT,-0.3,80,"citrate cycle, citrate cycle",smooth
+1006,JDM_B,HUWE1,0.1,77,"Wnt signalling, propanoate metabolism",smooth
+1007,JDM_B,GJA5,-0.3,71,"fatty acid degradation, MAPK",smooth
+1008,JDM_B,SPCS3,0.6,73,"citrate cycle, propanoate metabolism",cardiac
+1009,JDM_B,DOT1L,0.8,24,"Wnt signalling, Wnt signalling",cardiac
+1010,JDM_B,ATP6V0E1,0.9,59,"citrate cycle, Wnt signalling",smooth
+1011,JDM_B,XAF1,3.4,73,"apoptosis, pyruvate metabolism",skeletal
+1012,JDM_B,MAFG,-0.4,56,"synthesis and degradation of ketone bodies, focal adhesion",skeletal
+1013,JDM_B,AAK1,0.7,91,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",skeletal
+1014,JDM_B,TM2D3,-0.3,82,"citrate cycle, fatty acid degradation",smooth
+1015,JDM_B,SSR3,0.9,19,"fatty acid degradation, fatty acid degradation",skeletal
+1016,JDM_B,ZNF281,0.8,33,"propanoate metabolism, pyruvate metabolism",cardiac
+1017,JDM_B,JAM2,0.8,51,"cancer pathways, fatty acid degradation",smooth
+1018,JDM_B,CDC23,0.3,36,"propanoate metabolism, focal adhesion",skeletal
+1019,JDM_B,PLN,-0.3,14,"propanoate metabolism, MAPK",skeletal
+1020,JDM_B,PGP,-0.2,26,"cancer pathways, pyruvate metabolism",smooth
+1021,JDM_B,HYI,-0.2,72,"focal adhesion, Wnt signalling",smooth
+1022,JDM_B,IMPACT,0.4,61,"synthesis and degradation of ketone bodies, cancer pathways",smooth
+1023,JDM_B,C2orf49,0.6,59,"pyruvate metabolism, citrate cycle",cardiac
+1024,JDM_B,HDAC11,-0.2,41,"propanoate metabolism, focal adhesion",smooth
+1025,JDM_B,CCN4,-0.3,65,"focal adhesion, pyruvate metabolism",smooth
+1026,JDM_B,MKLN1,0.9,73,"Wnt signalling, propanoate metabolism",smooth
+1027,JDM_B,GPRC5B,NA,3,"MAPK, synthesis and degradation of ketone bodies",skeletal
+1028,JDM_B,RPS6KB1,0.8,69,"pyruvate metabolism, pyruvate metabolism",skeletal
+1029,JDM_B,PSMA3,-0.1,48,"apoptosis, synthesis and degradation of ketone bodies",smooth
+1030,JDM_B,JARID2,-0.2,40,"propanoate metabolism, MAPK",skeletal
+1031,JDM_B,ODF2,0.4,2,"citrate cycle, propanoate metabolism",cardiac
+1032,JDM_B,MON2,-0.1,14,"pyruvate metabolism, MAPK",smooth
+1033,JDM_B,PDLIM2,-0.2,52,"citrate cycle, pyruvate metabolism",cardiac
+1034,JDM_B,WAC,1.3,10,"propanoate metabolism, pyruvate metabolism",skeletal
+1035,JDM_B,FLCN,NA,42,"MAPK, pyruvate metabolism",cardiac
+1036,JDM_B,ATF6,0.7,42,"focal adhesion, fatty acid degradation",skeletal
+1037,JDM_B,TRAFD1,0.2,91,"Wnt signalling, citrate cycle",smooth
+1038,JDM_B,BICD1,NA,26,"cancer pathways, Wnt signalling",skeletal
+1039,JDM_B,ANP32A,-0.1,72,"cancer pathways, citrate cycle",cardiac
+1040,JDM_B,KDSR,0.8,75,"propanoate metabolism, fatty acid degradation",skeletal
+1041,JDM_B,FBXO9,-0.2,39,"MAPK, MAPK",cardiac
+1042,JDM_B,UBQLN2,0.3,7,"MAPK, synthesis and degradation of ketone bodies",smooth
+1043,JDM_B,ZFX,0.8,6,"MAPK, synthesis and degradation of ketone bodies",smooth
+1044,JDM_B,CPLX2,-0.3,85,"focal adhesion, synthesis and degradation of ketone bodies",smooth
+1045,JDM_B,CLPX,0.2,14,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+1046,JDM_B,SGCB,0.1,80,"Wnt signalling, synthesis and degradation of ketone bodies",cardiac
+1047,JDM_B,SEMA5A,-0.1,90,"apoptosis, Wnt signalling",skeletal
+1048,JDM_B,PTPRB,0.8,100,"apoptosis, focal adhesion",cardiac
+1049,JDM_B,TMEM33,0.6,60,"MAPK, Wnt signalling",cardiac
+1050,JDM_B,SMC1A,-0.1,7,"MAPK, pyruvate metabolism",skeletal
+1051,LGMD2A_B,NF1,NA,26,"Wnt signalling, pyruvate metabolism",skeletal
+1052,LGMD2A_B,UEVLD,-0.1,29,"apoptosis, citrate cycle",cardiac
+1053,LGMD2A_B,CDC37L1,-0.2,19,"MAPK, synthesis and degradation of ketone bodies",skeletal
+1054,LGMD2A_B,HOXD10,NA,99,"apoptosis, pyruvate metabolism",smooth
+1055,LGMD2A_B,NNT,-0.8,4,"synthesis and degradation of ketone bodies, citrate cycle",cardiac
+1056,LGMD2A_B,HUWE1,NA,93,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+1057,LGMD2A_B,GJA5,0.2,92,"pyruvate metabolism, MAPK",cardiac
+1058,LGMD2A_B,SPCS3,NA,49,"synthesis and degradation of ketone bodies, Wnt signalling",cardiac
+1059,LGMD2A_B,DOT1L,NA,87,"propanoate metabolism, citrate cycle",cardiac
+1060,LGMD2A_B,ATP6V0E1,0.1,0,"MAPK, Wnt signalling",skeletal
+1061,LGMD2A_B,XAF1,0.2,65,"citrate cycle, MAPK",skeletal
+1062,LGMD2A_B,MAFG,0.1,12,"fatty acid degradation, cancer pathways",skeletal
+1063,LGMD2A_B,AAK1,0.2,65,"propanoate metabolism, citrate cycle",cardiac
+1064,LGMD2A_B,TM2D3,NA,30,"citrate cycle, Wnt signalling",cardiac
+1065,LGMD2A_B,SSR3,0.1,53,"propanoate metabolism, pyruvate metabolism",skeletal
+1066,LGMD2A_B,ZNF281,-0.1,55,"propanoate metabolism, synthesis and degradation of ketone bodies",skeletal
+1067,LGMD2A_B,JAM2,0.4,7,"pyruvate metabolism, Wnt signalling",smooth
+1068,LGMD2A_B,CDC23,NA,27,"fatty acid degradation, citrate cycle",smooth
+1069,LGMD2A_B,PLN,-1.1,49,"synthesis and degradation of ketone bodies, focal adhesion",smooth
+1070,LGMD2A_B,PGP,-0.5,89,"cancer pathways, focal adhesion",cardiac
+1071,LGMD2A_B,HYI,0.2,89,"apoptosis, propanoate metabolism",smooth
+1072,LGMD2A_B,IMPACT,-0.1,21,"citrate cycle, MAPK",skeletal
+1073,LGMD2A_B,C2orf49,-0.1,80,"synthesis and degradation of ketone bodies, fatty acid degradation",cardiac
+1074,LGMD2A_B,HDAC11,-0.3,74,"synthesis and degradation of ketone bodies, Wnt signalling",smooth
+1075,LGMD2A_B,CCN4,-0.1,59,"Wnt signalling, fatty acid degradation",skeletal
+1076,LGMD2A_B,MKLN1,NA,0,"MAPK, citrate cycle",smooth
+1077,LGMD2A_B,GPRC5B,0.1,14,"propanoate metabolism, fatty acid degradation",cardiac
+1078,LGMD2A_B,RPS6KB1,-0.2,37,"apoptosis, Wnt signalling",skeletal
+1079,LGMD2A_B,PSMA3,0.1,18,"fatty acid degradation, pyruvate metabolism",skeletal
+1080,LGMD2A_B,JARID2,-0.1,45,"synthesis and degradation of ketone bodies, MAPK",cardiac
+1081,LGMD2A_B,ODF2,0.3,87,"pyruvate metabolism, propanoate metabolism",skeletal
+1082,LGMD2A_B,MON2,-0.1,13,"focal adhesion, MAPK",smooth
+1083,LGMD2A_B,PDLIM2,NA,5,"fatty acid degradation, synthesis and degradation of ketone bodies",cardiac
+1084,LGMD2A_B,WAC,0.1,49,"MAPK, citrate cycle",cardiac
+1085,LGMD2A_B,FLCN,-0.1,25,"cancer pathways, focal adhesion",skeletal
+1086,LGMD2A_B,ATF6,0.3,39,"Wnt signalling, pyruvate metabolism",smooth
+1087,LGMD2A_B,TRAFD1,-0.1,96,"propanoate metabolism, citrate cycle",smooth
+1088,LGMD2A_B,BICD1,0.3,29,"cancer pathways, pyruvate metabolism",skeletal
+1089,LGMD2A_B,ANP32A,0.1,48,"MAPK, fatty acid degradation",smooth
+1090,LGMD2A_B,KDSR,0.3,66,"MAPK, focal adhesion",smooth
+1091,LGMD2A_B,FBXO9,-0.3,72,"Wnt signalling, synthesis and degradation of ketone bodies",smooth
+1092,LGMD2A_B,UBQLN2,NA,33,"cancer pathways, apoptosis",cardiac
+1093,LGMD2A_B,ZFX,-0.1,25,"apoptosis, pyruvate metabolism",skeletal
+1094,LGMD2A_B,CPLX2,NA,56,"Wnt signalling, cancer pathways",smooth
+1095,LGMD2A_B,CLPX,-0.3,8,"citrate cycle, fatty acid degradation",cardiac
+1096,LGMD2A_B,SGCB,NA,81,"synthesis and degradation of ketone bodies, fatty acid degradation",cardiac
+1097,LGMD2A_B,SEMA5A,-0.1,49,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",smooth
+1098,LGMD2A_B,PTPRB,-0.1,74,"pyruvate metabolism, fatty acid degradation",smooth
+1099,LGMD2A_B,TMEM33,0.2,59,"MAPK, fatty acid degradation",cardiac
+1100,LGMD2A_B,SMC1A,-0.1,61,"propanoate metabolism, synthesis and degradation of ketone bodies",smooth
+1101,LGMD2B_B,NF1,NA,60,"apoptosis, propanoate metabolism",cardiac
+1102,LGMD2B_B,UEVLD,NA,17,"MAPK, fatty acid degradation",cardiac
+1103,LGMD2B_B,CDC37L1,-0.1,75,"cancer pathways, MAPK",smooth
+1104,LGMD2B_B,HOXD10,NA,14,"citrate cycle, MAPK",smooth
+1105,LGMD2B_B,NNT,-0.8,58,"citrate cycle, citrate cycle",cardiac
+1106,LGMD2B_B,HUWE1,NA,11,"Wnt signalling, synthesis and degradation of ketone bodies",cardiac
+1107,LGMD2B_B,GJA5,0.5,93,"focal adhesion, cancer pathways",skeletal
+1108,LGMD2B_B,SPCS3,0.2,15,"apoptosis, MAPK",smooth
+1109,LGMD2B_B,DOT1L,-0.1,55,"pyruvate metabolism, focal adhesion",smooth
+1110,LGMD2B_B,ATP6V0E1,0.2,28,"citrate cycle, focal adhesion",smooth
+1111,LGMD2B_B,XAF1,0.1,96,"apoptosis, citrate cycle",smooth
+1112,LGMD2B_B,MAFG,0.3,46,"focal adhesion, fatty acid degradation",cardiac
+1113,LGMD2B_B,AAK1,0.3,96,"pyruvate metabolism, Wnt signalling",cardiac
+1114,LGMD2B_B,TM2D3,NA,28,"apoptosis, Wnt signalling",smooth
+1115,LGMD2B_B,SSR3,0.2,49,"pyruvate metabolism, MAPK",skeletal
+1116,LGMD2B_B,ZNF281,-0.1,33,"focal adhesion, cancer pathways",smooth
+1117,LGMD2B_B,JAM2,0.2,4,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+1118,LGMD2B_B,CDC23,NA,92,"citrate cycle, Wnt signalling",skeletal
+1119,LGMD2B_B,PLN,-1.1,7,"citrate cycle, MAPK",skeletal
+1120,LGMD2B_B,PGP,-0.4,27,"citrate cycle, apoptosis",smooth
+1121,LGMD2B_B,HYI,NA,94,"pyruvate metabolism, propanoate metabolism",skeletal
+1122,LGMD2B_B,IMPACT,-0.2,14,"pyruvate metabolism, MAPK",skeletal
+1123,LGMD2B_B,C2orf49,-0.4,59,"synthesis and degradation of ketone bodies, fatty acid degradation",cardiac
+1124,LGMD2B_B,HDAC11,NA,41,"cancer pathways, cancer pathways",smooth
+1125,LGMD2B_B,CCN4,-0.1,59,"synthesis and degradation of ketone bodies, propanoate metabolism",smooth
+1126,LGMD2B_B,MKLN1,-0.2,6,"MAPK, focal adhesion",smooth
+1127,LGMD2B_B,GPRC5B,NA,52,"MAPK, pyruvate metabolism",smooth
+1128,LGMD2B_B,RPS6KB1,-0.3,83,"propanoate metabolism, propanoate metabolism",skeletal
+1129,LGMD2B_B,PSMA3,NA,76,"synthesis and degradation of ketone bodies, MAPK",smooth
+1130,LGMD2B_B,JARID2,-0.2,81,"apoptosis, synthesis and degradation of ketone bodies",cardiac
+1131,LGMD2B_B,ODF2,0.2,82,"apoptosis, pyruvate metabolism",cardiac
+1132,LGMD2B_B,MON2,NA,14,"synthesis and degradation of ketone bodies, propanoate metabolism",smooth
+1133,LGMD2B_B,PDLIM2,NA,96,"propanoate metabolism, propanoate metabolism",smooth
+1134,LGMD2B_B,WAC,-0.2,19,"cancer pathways, MAPK",cardiac
+1135,LGMD2B_B,FLCN,-0.1,30,"cancer pathways, cancer pathways",cardiac
+1136,LGMD2B_B,ATF6,0.1,23,"Wnt signalling, synthesis and degradation of ketone bodies",cardiac
+1137,LGMD2B_B,TRAFD1,-0.3,2,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",smooth
+1138,LGMD2B_B,BICD1,0.1,99,"cancer pathways, pyruvate metabolism",skeletal
+1139,LGMD2B_B,ANP32A,0.1,14,"propanoate metabolism, Wnt signalling",smooth
+1140,LGMD2B_B,KDSR,NA,100,"propanoate metabolism, synthesis and degradation of ketone bodies",skeletal
+1141,LGMD2B_B,FBXO9,-0.2,11,"citrate cycle, Wnt signalling",smooth
+1142,LGMD2B_B,UBQLN2,NA,26,"citrate cycle, propanoate metabolism",cardiac
+1143,LGMD2B_B,ZFX,-0.1,51,"Wnt signalling, fatty acid degradation",skeletal
+1144,LGMD2B_B,CPLX2,0.2,90,"fatty acid degradation, synthesis and degradation of ketone bodies",skeletal
+1145,LGMD2B_B,CLPX,-0.3,11,"apoptosis, pyruvate metabolism",cardiac
+1146,LGMD2B_B,SGCB,-0.3,45,"MAPK, pyruvate metabolism",smooth
+1147,LGMD2B_B,SEMA5A,-0.2,20,"apoptosis, Wnt signalling",smooth
+1148,LGMD2B_B,PTPRB,-0.3,87,"fatty acid degradation, fatty acid degradation",skeletal
+1149,LGMD2B_B,TMEM33,0.1,37,"synthesis and degradation of ketone bodies, fatty acid degradation",cardiac
+1150,LGMD2B_B,SMC1A,NA,74,"synthesis and degradation of ketone bodies, apoptosis",skeletal
+1151,LGMD2I_B,NF1,NA,66,"citrate cycle, pyruvate metabolism",cardiac
+1152,LGMD2I_B,UEVLD,0.1,20,"synthesis and degradation of ketone bodies, citrate cycle",smooth
+1153,LGMD2I_B,CDC37L1,-0.1,11,"propanoate metabolism, synthesis and degradation of ketone bodies",cardiac
+1154,LGMD2I_B,HOXD10,-0.1,70,"focal adhesion, synthesis and degradation of ketone bodies",skeletal
+1155,LGMD2I_B,NNT,-0.6,44,"Wnt signalling, focal adhesion",skeletal
+1156,LGMD2I_B,HUWE1,NA,41,"fatty acid degradation, propanoate metabolism",smooth
+1157,LGMD2I_B,GJA5,0.3,73,"focal adhesion, citrate cycle",smooth
+1158,LGMD2I_B,SPCS3,0.2,97,"cancer pathways, fatty acid degradation",cardiac
+1159,LGMD2I_B,DOT1L,-0.1,80,"MAPK, apoptosis",smooth
+1160,LGMD2I_B,ATP6V0E1,0.1,98,"apoptosis, MAPK",cardiac
+1161,LGMD2I_B,XAF1,0.1,28,"synthesis and degradation of ketone bodies, pyruvate metabolism",cardiac
+1162,LGMD2I_B,MAFG,0.2,56,"Wnt signalling, apoptosis",skeletal
+1163,LGMD2I_B,AAK1,0.4,66,"apoptosis, focal adhesion",cardiac
+1164,LGMD2I_B,TM2D3,NA,79,"apoptosis, synthesis and degradation of ketone bodies",cardiac
+1165,LGMD2I_B,SSR3,NA,68,"pyruvate metabolism, Wnt signalling",cardiac
+1166,LGMD2I_B,ZNF281,-0.3,13,"citrate cycle, synthesis and degradation of ketone bodies",smooth
+1167,LGMD2I_B,JAM2,NA,38,"synthesis and degradation of ketone bodies, MAPK",smooth
+1168,LGMD2I_B,CDC23,NA,54,"MAPK, Wnt signalling",cardiac
+1169,LGMD2I_B,PLN,-0.3,57,"MAPK, apoptosis",skeletal
+1170,LGMD2I_B,PGP,-0.4,29,"Wnt signalling, focal adhesion",cardiac
+1171,LGMD2I_B,HYI,0.2,28,"citrate cycle, pyruvate metabolism",skeletal
+1172,LGMD2I_B,IMPACT,-0.1,42,"citrate cycle, Wnt signalling",smooth
+1173,LGMD2I_B,C2orf49,-0.2,36,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",skeletal
+1174,LGMD2I_B,HDAC11,-0.1,34,"apoptosis, propanoate metabolism",skeletal
+1175,LGMD2I_B,CCN4,NA,62,"citrate cycle, apoptosis",cardiac
+1176,LGMD2I_B,MKLN1,NA,25,"synthesis and degradation of ketone bodies, MAPK",skeletal
+1177,LGMD2I_B,GPRC5B,0.1,71,"apoptosis, propanoate metabolism",smooth
+1178,LGMD2I_B,RPS6KB1,-0.2,30,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+1179,LGMD2I_B,PSMA3,-0.1,75,"MAPK, fatty acid degradation",cardiac
+1180,LGMD2I_B,JARID2,-0.2,84,"synthesis and degradation of ketone bodies, apoptosis",cardiac
+1181,LGMD2I_B,ODF2,0.2,21,"propanoate metabolism, pyruvate metabolism",cardiac
+1182,LGMD2I_B,MON2,-0.2,46,"apoptosis, MAPK",cardiac
+1183,LGMD2I_B,PDLIM2,0.1,45,"propanoate metabolism, apoptosis",skeletal
+1184,LGMD2I_B,WAC,0.1,9,"citrate cycle, synthesis and degradation of ketone bodies",cardiac
+1185,LGMD2I_B,FLCN,-0.1,87,"Wnt signalling, fatty acid degradation",smooth
+1186,LGMD2I_B,ATF6,0.2,54,"cancer pathways, apoptosis",cardiac
+1187,LGMD2I_B,TRAFD1,-0.2,60,"propanoate metabolism, fatty acid degradation",skeletal
+1188,LGMD2I_B,BICD1,0.3,91,"MAPK, cancer pathways",cardiac
+1189,LGMD2I_B,ANP32A,NA,71,"synthesis and degradation of ketone bodies, synthesis and degradation of ketone bodies",smooth
+1190,LGMD2I_B,KDSR,0.1,70,"citrate cycle, MAPK",skeletal
+1191,LGMD2I_B,FBXO9,-0.2,77,"MAPK, citrate cycle",cardiac
+1192,LGMD2I_B,UBQLN2,-0.2,94,"apoptosis, propanoate metabolism",cardiac
+1193,LGMD2I_B,ZFX,NA,10,"apoptosis, synthesis and degradation of ketone bodies",skeletal
+1194,LGMD2I_B,CPLX2,0.2,12,"Wnt signalling, Wnt signalling",smooth
+1195,LGMD2I_B,CLPX,-0.3,26,"apoptosis, fatty acid degradation",smooth
+1196,LGMD2I_B,SGCB,-0.1,45,"synthesis and degradation of ketone bodies, fatty acid degradation",smooth
+1197,LGMD2I_B,SEMA5A,-0.2,22,"focal adhesion, Wnt signalling",skeletal
+1198,LGMD2I_B,PTPRB,0.1,62,"MAPK, apoptosis",smooth
+1199,LGMD2I_B,TMEM33,0.1,34,"pyruvate metabolism, pyruvate metabolism",cardiac
+1200,LGMD2I_B,SMC1A,-0.2,89,"Wnt signalling, citrate cycle",skeletal

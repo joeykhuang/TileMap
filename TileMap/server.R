@@ -4,6 +4,7 @@ library(tibble)
 library(superheat)
 library(plotly)
 library(forcats)
+library(DT)
 
 # Define server logic required to draw a histogram
 function(input, output, session) {
@@ -24,8 +25,7 @@ function(input, output, session) {
                          "1.5" = "#E16D54",
                          "2" = "#AA1B1B")
     
-    fc_sample_pivot <- reactive({pivot_longer(res(), cols = !X, names_to = "gene", values_to = "fold") %>%
-        rename(condition = X) %>%
+    fc_sample_pivot <- reactive({res() %>%
         mutate(val = as.integer(fold > 0) * 2 - 1) %>%
         mutate(fold_cat = case_when(
           fold < -2 ~ -2,
@@ -67,5 +67,9 @@ function(input, output, session) {
                                                breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text"),
                   on = "plotly_hover", opacityDim=0.3)
       }
-    }) 
+    })
+    
+    output$table <- DT::renderDataTable(res(),
+                                        options = list(scrollX = TRUE),
+                                        rownames = FALSE)
 }
