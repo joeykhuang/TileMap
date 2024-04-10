@@ -2,10 +2,10 @@ library(shiny)
 library(plotly)
 library(shinythemes)
 library(shinycssloaders)
+library(shinyWidgets)
 
 # Define UI for application that draws a histogram
 datasets = fs::path_ext_remove(unique(list.files("datasets/")))
-print(datasets)
 
 button_color_css <- "
 #DivCompClear, #FinderClear, #EnterTimes{
@@ -17,38 +17,19 @@ background: DodgerBlue;
 font-size: 15px;
 }"
 
-# 
-# fluidPage(
-# 
-#     # Application title
-#     titlePanel("TileMap"),
-# 
-#     # Sidebar with a slider input for number of bins
-#     verticalLayout(
-#         
-#         # Show a plot of the generated distribution
-#         selectInput("dataset", "Choose Dataset", choices=datasets, selected=datasets[0]),
-#         
-#         mainPanel(
-#             plotlyOutput("tilePlot"),
-#             width=10
-#         ),
-#         
-#         actionButton("button", "Switch View"),
-# 
-#         # wellPanel(
-#         #   actionLink("selectall","Select All"),
-#         #   checkboxGroupInput("conds",
-#         #               "Conditions:",
-#         #               choices,
-#         #               inline=TRUE,
-#         #               selected=choices)
-#         # ),
-#         # 
-#     )
-# )
+tweaks <- 
+  list(tags$head(tags$style(HTML("
+                                 .multicol { 
+                                   height: 350px;
+                                   -webkit-column-count: 2; /* Chrome, Safari, Opera */ 
+                                   -moz-column-count: 2;    /* Firefox */ 
+                                   column-count: 2; 
+                                   -moz-column-fill: auto;
+                                   -column-fill: auto;
+                                 }")) ))
 
 ui <- fluidPage(
+  tweaks,
   
   #Navbar structure for UI
   navbarPage("TileMap", theme = shinytheme("journal"),
@@ -66,31 +47,20 @@ ui <- fluidPage(
                                       width = "220px"
                           ),
                           fluidRow(
-                          column(9, offset = 0,
-                                 # Select which Region(s) to plot
-                                 checkboxGroupInput(inputId = "ConditionFilter",
-                                                    label = "Select Condition(s):",
-                                                    choices = c(),
-                                                    selected = "")
-                          )),
+                            column(width = 9, 
+                            tags$div(align = 'left', 
+                                     class = 'multicol',
+                                     uiOutput("conditionSelection")))
+                          ),
                           actionButton("button", "Switch View"),
                           hr(),
                           titlePanel("Filtering"),
                         ),
                         mainPanel(
-                          # fluidRow(
-                          #   column(3, offset = 9,
-                          #          radioButtons(inputId = "show_NamesFinder",
-                          #                       label = "Display:",
-                          #                       choices = c("School Names", "City Names", "Neither"),
-                          #                       selected = "School Names")
-                          #   )),
-                          # hr(),
                           withSpinner(plotlyOutput("tilePlot")),
                           hr(),
                           fluidRow(column(7,
                                           helpText("Tip: Click locations to populate table below with information on schools in a specific area")
-                                          #actionButton(inputId = "draw", label = "Input Event and Times")
                                           
                           ),
                           column(width = 2, offset = 2, conditionalPanel(

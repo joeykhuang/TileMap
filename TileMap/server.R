@@ -5,6 +5,7 @@ library(superheat)
 library(plotly)
 library(forcats)
 library(DT)
+library(shinyjs)
 
 # Define server logic required to draw a histogram
 function(input, output, session) {
@@ -14,6 +15,8 @@ function(input, output, session) {
       if(!is.null(fileName)){
         read.csv(paste0("datasets/", fileName(), ".csv"))
       }})
+    
+    res_selected <- reactive({res() %>% filter(condition %in% input$condSelect)})
     
     
     fold_cat_colors <- c("-2" = "#103D80",
@@ -25,7 +28,7 @@ function(input, output, session) {
                          "1.5" = "#E16D54",
                          "2" = "#AA1B1B")
     
-    fc_sample_pivot <- reactive({res() %>%
+    fc_sample_pivot <- reactive({res_selected() %>%
         mutate(val = as.integer(fold > 0) * 2 - 1) %>%
         mutate(fold_cat = case_when(
           fold < -2 ~ -2,
@@ -55,7 +58,7 @@ function(input, output, session) {
                                          axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
                                    scale_fill_manual(values=fold_cat_colors, name="Fold Change",
                                                      breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text"),
-                        on = "plotly_hover", opacityDim=0.3)
+                        on = "plotly_click", opacityDim=0.3)
       } else {
         highlight(ggplotly(ggplot(data = highlight_key(fc_sample_pivot(), ~condition), 
                                   aes(x=fct_reorder(gene, val), y=val, fill=fold_cat, text=condition)) +
@@ -65,11 +68,25 @@ function(input, output, session) {
                                    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
                              scale_fill_manual(values=fold_cat_colors, name="Fold Change",
                                                breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text"),
-                  on = "plotly_hover", opacityDim=0.3)
+                  on = "plotly_click", opacityDim=0.3)
       }
     })
     
-    output$table <- DT::renderDataTable(res(),
+    output$table <- DT::renderDataTable(res_selected(),
                                         options = list(scrollX = TRUE),
                                         rownames = FALSE)
+    
+    output$conditionSelection <- renderUI({
+      conditionChoices <- unique(res()$condition)
+      prettyCheckboxGroup(inputId = "condSelect",
+                           label = "Select Condition(s):",
+                           choices = conditionChoices,
+                           selected = conditionChoices,
+                           outline = TRUE,
+                           plain = FALSE,
+                          inline = FALSE,
+                           animation = "jelly")
+    })
+      
 }
+
