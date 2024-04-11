@@ -53,22 +53,25 @@ function(input, output, session) {
                                         aes(y=fct_reorder(condition, val), x=val, fill=fold_cat, text=gene)) +
                                    geom_col(position="stack",alpha=1,color='black',linewidth=0.2) +
                                    #geom_text(aes(label = gene), position = position_stack(vjust = .5), size=3) +
-                                   geom_hline(yintercept=0, size=1) +
-                                   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background=element_blank(),
-                                         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+                                   geom_vline(xintercept=0, size=1) +
+                                   xlab("# of Changed Genes") + 
+                                   ylab("Conditions") + 
+                                   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background=element_blank(), legend.position='none') +
                                    scale_fill_manual(values=fold_cat_colors, name="Fold Change",
-                                                     breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text"),
-                        on = "plotly_click", opacityDim=0.3)
+                                                     breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text") %>% config(displayModeBar = FALSE),
+                        on = "plotly_click", opacityDim=0.3, selected = attrs_selected(showlegend = FALSE))
       } else {
         highlight(ggplotly(ggplot(data = highlight_key(fc_sample_pivot(), ~condition), 
                                   aes(x=fct_reorder(gene, val), y=val, fill=fold_cat, text=condition)) +
                              geom_col(position="stack",alpha=1,color='black',linewidth=0.2) +
                              geom_hline(yintercept=0, size=1) +
+                             xlab("Genes") + 
+                             ylab("# of Changed Conditions") + 
                              theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background=element_blank(),
-                                   axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+                                   axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position='none') +
                              scale_fill_manual(values=fold_cat_colors, name="Fold Change",
-                                               breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text"),
-                  on = "plotly_click", opacityDim=0.3)
+                                               breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")), tooltip = "text") %>% config(displayModeBar = FALSE),
+                  on = "plotly_click", opacityDim=0.3, selected = attrs_selected(showlegend = FALSE))
       }
     })
     

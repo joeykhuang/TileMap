@@ -6,6 +6,7 @@ library(shinyWidgets)
 
 # Define UI for application that draws a histogram
 datasets = fs::path_ext_remove(unique(list.files("datasets/")))
+print(datasets)
 
 button_color_css <- "
 #DivCompClear, #FinderClear, #EnterTimes{
@@ -20,7 +21,7 @@ font-size: 15px;
 tweaks <- 
   list(tags$head(tags$style(HTML("
                                  .multicol { 
-                                   height: 350px;
+                                   height: 450px;
                                    -webkit-column-count: 2; /* Chrome, Safari, Opera */ 
                                    -moz-column-count: 2;    /* Firefox */ 
                                    column-count: 2; 
@@ -43,7 +44,7 @@ ui <- fluidPage(
                           selectInput(inputId = "dataset",
                                       label = "Choose Dataset",
                                       choices = datasets,
-                                      selected = datasets[3],
+                                      selected = datasets[4],
                                       width = "220px"
                           ),
                           fluidRow(
@@ -57,65 +58,58 @@ ui <- fluidPage(
                           titlePanel("Filtering"),
                         ),
                         mainPanel(
-                          withSpinner(plotlyOutput("tilePlot")),
+                          fluidRow(
+                          withSpinner(plotlyOutput("tilePlot"))),
                           hr(),
-                          fluidRow(column(7,
-                                          helpText("Tip: Click locations to populate table below with information on schools in a specific area")
-                                          
-                          ),
-                          column(width = 2, offset = 2, conditionalPanel(
-                            condition = "output.schoolstableFinder",
-                            actionButton(inputId = "FinderClear", label = "Clear Table")))),
-                          br(),
                           fluidRow(
                             withSpinner(DT::dataTableOutput(outputId = "table"))))
                       )
              ),
              
-             tabPanel("Compare", fluid = TRUE, icon = icon("swimmer"),
-                      titlePanel("Program Comparisons"),
-                      fluidRow(
-                        column(6,
-                               selectizeInput(inputId = "SchoolSelectA",
-                                              label = "Select Schools (Max 4)",
-                                              choices = unique(conditions),
-                                              multiple = TRUE,
-                                              options = list(maxItems = 4, placeholder = 'Enter school name',
-                                                             onInitialize = I('function() { this.setValue(""); }'))
-                               ),
-                               selectInput(inputId = "SchoolCompRace",
-                                           label = "Select Event",
-                                           choices = levels(conditions),
-                                           selected = "50 Free"),
-                               helpText("Select school and event to create plots")
-                        ),
-                        column(6,
-                               checkboxGroupInput(inputId = "SchoolCompGender",
-                                                  label = "Select Gender(s):",
-                                                  choices = c("Male" = "M", "Female" = "F"),
-                                                  selected = "M"),
-                               radioButtons(inputId = "TuitionType",
-                                            label = "Use In-State Tution?",
-                                            choices = c("Yes", "No"),
-                                            selected = "Yes"),
-                               helpText("Note: In-state tuition will only apply to public schools")
-                        )
-                      ),
-                      hr(),
-                      fluidRow(
-                        column(6,
-                               withSpinner(plotOutput(outputId = "SchoolCompPlotEvent"
-                                                      # brush = "brush_SchoolComp"
-                               )),
-                               br(),
-                               dataTableOutput(outputId = "SchoolCompDT")
-                        ),
-                        column(6,
-                               dataTableOutput(outputId = "SchoolCompStats"),
-                               helpText("For more information on school types and US News rankings please see More > About > School Types & Rankings")
-                        )
-                      )
-             ),
+             # tabPanel("Compare", fluid = TRUE, icon = icon("swimmer"),
+             #          titlePanel("Program Comparisons"),
+             #          fluidRow(
+             #            column(6,
+             #                   selectizeInput(inputId = "SchoolSelectA",
+             #                                  label = "Select Schools (Max 4)",
+             #                                  choices = unique(conditions),
+             #                                  multiple = TRUE,
+             #                                  options = list(maxItems = 4, placeholder = 'Enter school name',
+             #                                                 onInitialize = I('function() { this.setValue(""); }'))
+             #                   ),
+             #                   selectInput(inputId = "SchoolCompRace",
+             #                               label = "Select Event",
+             #                               choices = levels(conditions),
+             #                               selected = "50 Free"),
+             #                   helpText("Select school and event to create plots")
+             #            ),
+             #            column(6,
+             #                   checkboxGroupInput(inputId = "SchoolCompGender",
+             #                                      label = "Select Gender(s):",
+             #                                      choices = c("Male" = "M", "Female" = "F"),
+             #                                      selected = "M"),
+             #                   radioButtons(inputId = "TuitionType",
+             #                                label = "Use In-State Tution?",
+             #                                choices = c("Yes", "No"),
+             #                                selected = "Yes"),
+             #                   helpText("Note: In-state tuition will only apply to public schools")
+             #            )
+             #          ),
+             #          hr(),
+             #          fluidRow(
+             #            column(6,
+             #                   withSpinner(plotOutput(outputId = "SchoolCompPlotEvent"
+             #                                          # brush = "brush_SchoolComp"
+             #                   )),
+             #                   br(),
+             #                   dataTableOutput(outputId = "SchoolCompDT")
+             #            ),
+             #            column(6,
+             #                   dataTableOutput(outputId = "SchoolCompStats"),
+             #                   helpText("For more information on school types and US News rankings please see More > About > School Types & Rankings")
+             #            )
+             #          )
+             # ),
              navbarMenu("More", icon = icon("info-circle"),
                         tabPanel("School Types & Rankings", fluid = TRUE,
                                  fluidRow(
