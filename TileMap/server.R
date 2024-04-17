@@ -6,6 +6,7 @@ library(plotly)
 library(forcats)
 library(DT)
 library(shinyjs)
+library(ggh4x)
 
 # Define server logic required to draw a histogram
 function(input, output, session) {
@@ -54,7 +55,7 @@ function(input, output, session) {
     "2" = "#AA1B1B"
   )
   
-  fc_sample_pivot <- reactive({
+  res_levels <- reactive({
     res_selected() %>%
       mutate(val = as.integer(fold > 0) * 2 - 1) %>%
       mutate(
@@ -79,42 +80,96 @@ function(input, output, session) {
   
   output$tilePlot <- renderPlotly({
     if (!input$button) {
-      highlight(
-        ggplotly(
-          ggplot(
-            data = highlight_key(fc_sample_pivot(), ~ gene),
-            aes(
-              y = fct_reorder(condition, val, .na_rm = TRUE),
-              x = val,
-              fill = fold_cat,
-              text = gene
-            )
+      add_facet <- !is.null(input$groupID) && input$groupID != ''
+      # 1 block in bottom chunks
+      p <- ggplotly(
+        ggplot(
+          data = highlight_key(res_levels(), ~ gene),
+          aes(
+            y = fct_reorder(condition, val, .na_rm = TRUE),
+            x = val,
+            fill = fold_cat,
+            text = gene
+          )
+        ) +
+          geom_col(
+            position = "stack",
+            alpha = 1,
+            color = 'black',
+            linewidth = 0.2,
+            na.rm = TRUE
           ) +
-            geom_col(
-              position = "stack",
-              alpha = 1,
-              color = 'black',
-              linewidth = 0.2,
-              na.rm = TRUE
-            ) +
-            #geom_text(aes(label = gene), position = position_stack(vjust = .5), size=3) +
-            geom_vline(xintercept = 0, size = 1) +
-            xlab("# of Changed Genes") +
-            ylab("Conditions") +
-            theme(
-              panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank(),
-              panel.background = element_blank()
-            ) +
-            scale_fill_manual(
-              values = fold_cat_colors,
-              name = "Fold Change",
-              breaks = c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")
-            ),
-          tooltip = "text",
-          width = cdata$output_pid_width,
-          height = cdata$output_pid_height
-        ) %>% config(displayModeBar = FALSE),
+          #geom_text(aes(label = gene), position = position_stack(vjust = .5), size=3) +
+          geom_vline(xintercept = 0, size = 1) +
+          xlab("# of Changed Genes") +
+          ylab("Conditions") +
+          theme(
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            panel.background = element_blank(),
+            strip.background = element_rect(fill="#EFEFEF", color = "black",linewidth = 1),
+            strip.text = element_text(size = 10)
+          ) +
+          scale_fill_manual(
+            values = fold_cat_colors,
+            name = "Fold Change",
+            breaks = c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")
+          ) + 
+          {if (add_facet) facet_grid(~get(input$groupID) ~ ., space="free_y", scales = "free_y", switch="y", drop=TRUE)} +
+          {if (add_facet) theme(panel.border = element_rect(fill="transparent", linewidth=1))}
+        ,
+        tooltip = "text",
+        #width = cdata$output_pid_width,
+        #height = cdata$output_pid_height
+      ) %>% config(displayModeBar = FALSE)
+
+      if (add_facet) {
+        total_size = nrow(res_levels())
+        group_sizes <- (res_levels() %>% group_by(group) %>% summarise(n = n() / total_size))$n
+        group_end <- c(rev(cumsum(group_sizes)), 0)
+        num_groups = length(group_sizes)
+
+        if (num_groups > 5) {
+          showNotification("cannot plot more than 5 groups",type = "error", duration = 5)
+          return()
+        }
+        if (num_groups >= 2){
+          p$x$layout$yaxis$domain <- c(group_end[2], group_end[1])
+          p$x$layout$yaxis2$domain <- c(group_end[3], group_end[2])
+        }
+        if (num_groups >= 3){
+          p$x$layout$yaxis3$domain <- c(group_end[4], group_end[3])
+        }
+        if (num_groups >= 4){
+          p$x$layout$yaxis4$domain <- c(group_end[5], group_end[4])
+        }
+        if (num_groups == 5){
+          p$x$layout$yaxis5$domain <- c(group_end[6], group_end[5])
+        }
+        
+        lapply(3:(2 + num_groups), function(i){
+          print(p$x$layout$annotations[[i]]$text)
+          p$x$layout$annotations[[i]]$y <<- (group_end[i - 1] + group_end[i - 2])/2
+        })
+        
+        margin_size <- 0.003
+        lapply(seq(2, 2 * num_groups, 2), function(i){
+          p$x$layout$shapes[[i]]$y0 <<- group_end[i/2 + 1] + margin_size
+          p$x$layout$shapes[[i]]$y1 <<- group_end[i/2] - margin_size
+        })
+        
+        lapply(seq(1, 2 * num_groups - 1, 2), function(i){
+          print(i)
+          print(group_end[i/2 + 1])
+          print(group_end[i/2])
+          p$x$layout$shapes[[i]]$y0 <<- group_end[(i + 1)/2 + 1] + margin_size
+          p$x$layout$shapes[[i]]$y1 <<- group_end[(i + 1)/2] - margin_size
+        })
+      }
+      
+      
+      highlight(
+        p,
         on = "plotly_click",
         off = "plotly_doubleclick",
         opacityDim = 0.3,
@@ -124,7 +179,7 @@ function(input, output, session) {
       highlight(
         ggplotly(
           ggplot(
-            data = highlight_key(fc_sample_pivot(), ~ condition),
+            data = highlight_key(res_levels(), ~ condition),
             aes(
               x = fct_reorder(gene, val, .na_rm = TRUE),
               y = val,
@@ -132,6 +187,7 @@ function(input, output, session) {
               text = condition
             )
           ) +
+            facet_grid(. ~ genegroup, scales = "free", space = "free") +
             geom_col(
               position = "stack",
               alpha = 1,
@@ -211,6 +267,18 @@ function(input, output, session) {
       label = "Select Column:",
       choices = filterChoices,
       selected = ""
+    )
+  })
+  
+  output$groupBy <- renderUI({
+    groupChoices <- unique(colnames(res()))
+    groupChoices <-
+      c("", groupChoices[!groupChoices %in% c("X", "gene", "condition")])
+    selectInput(
+      inputId = "groupID",
+      label = "Group By:",
+      choices = groupChoices,
+      selected = "group"
     )
   })
   

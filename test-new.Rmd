@@ -16,7 +16,7 @@ setwd("~/Desktop/Harvard/senior/cs271/Project/TileMap")
 res_raw <- read.csv("E-GEOD-3307-A-AFFY-33-query-results.csv")
 res_top <- res_raw[1:11950,] %>% select_if(~ !all(is.na(.)))
 res_bot <- res_raw[11951:21749,] %>% select_if(~ !all(is.na(.)))
-res <- merge(res_top, res_bot, by = "Gene.Name", all=TRUE) %>% mutate(geneid = coalesce(Gene.ID.x, Gene.ID.y)) %>% select(-Gene.ID.x, -Gene.ID.y, -Design.Element.x, -Design.Element.y)
+res <- merge(res_top, res_bot, by = "Gene.Name", all=TRUE) %>% mutate(geneid = coalesce(Gene.ID.x, Gene.ID.y)) %>% dplyr::select(-Gene.ID.x, -Gene.ID.y, -Design.Element.x, -Design.Element.y)
 res <- res[!duplicated(res$Gene.Name), ] 
 rownames(res) <- res$Gene.Name
 #exp_design <- read.csv("E-GEOD-3307-experiment-design.tsv", sep="\t")
@@ -36,9 +36,9 @@ colnames(res) <- sub(pattern = "^X.(\\w+(\\.{1}\\w{2}?)?).+([AB])\\.{2}(\\w+)$",
 ```
 
 ```{r}
-fc <- res %>% select(contains("foldChange"))
+fc <- res %>% dplyr::select(contains("foldChange"))
 colnames(fc) <- sub(pattern = "^(.+)_foldChange$", replacement = "\\1", x = colnames(fc))
-pval <- res %>% select(contains("pValue"))
+pval <- res %>% dplyr::select(contains("pValue"))
 colnames(pval) <- sub(pattern = "^(.+)_pValue$", replacement = "\\1", x = colnames(pval))
 
 # just visualize something for now
@@ -92,11 +92,11 @@ fold_cat_colors <- c("-2" = "#103D80",
 fc_sample_pivot$fold_cat <- factor(fc_sample_pivot$fold_cat, levels = c("-2", "-1.5", "-0.75", "-0.25", "2", "1.5", "0.75", "0.25"))
 fc_sample_pivot <- fc_sample_pivot[order(abs(fc_sample_pivot$fold), decreasing = FALSE),]
 
-ggplot(data = fc_sample_pivot, aes(y=condition, x=val, fill=as.factor(fold_cat))) +
+ggplotly(ggplot(data = fc_sample_pivot, aes(y=condition, x=val, fill=as.factor(fold_cat))) +
   geom_col(position="stack",alpha=1,color='black',linewidth=0.2) + 
   geom_vline(xintercept=0, size=1)+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background=element_blank()) +
-  scale_fill_manual(values=fold_cat_colors, name="Fold Change", breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2"))
+  scale_fill_manual(values=fold_cat_colors, name="Fold Change", breaks=c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")))
 
 ```
 
@@ -110,4 +110,89 @@ superheat(t(fc_sample),heat.na.col = "white",
           bottom.label.size = 0.4,
           bottom.label.text.angle = 90,
           heat.pal = c("blue", "white", "red"))
+```
+
+```{r}
+
+setwd("~/Desktop/Harvard/senior/cs271/Project/TileMap/Tilemap")
+res <- read.csv("datasets/Jorstad.csv")
+fold_cat_colors <- c(
+  "-2" = "#103D80",
+  "-1.5" = "#3A7EBD",
+  "-0.75" = "#6FA5CC",
+  "-0.25" = "#D7EBF9",
+  "0.25" = "#FFF8E0",
+  "0.75" = "#ffe396",
+  "1.5" = "#E16D54",
+  "2" = "#AA1B1B"
+)
+
+fc_sample_pivot <-
+  res %>%
+  mutate(val = as.integer(fold > 0) * 2 - 1) %>%
+  mutate(
+    fold_cat = case_when(
+      fold < -2 ~ -2,
+      fold <= -1 ~ -1.5,
+      fold <= -0.25 ~ -0.75,
+      fold <= 0 ~ -0.25,
+      fold <= 0.25 ~ 0.25,
+      fold <= 1 ~ 0.75,
+      fold <= 2 ~ 1.5,
+      fold > 2 ~ 2,
+    )
+  ) %>%
+  mutate(fold_cat = factor(
+    fold_cat,
+    levels = c("-2", "-1.5", "-0.75", "-0.25", "2", "1.5", "0.75", "0.25")
+  ))
+```
+
+
+```{r}
+g <- ggplot(
+  data = highlight_key(fc_sample_pivot, ~ gene),
+  aes(
+    y = fct_reorder(condition, val, .na_rm = TRUE),
+    x = val,
+    fill = fold_cat,
+    text = gene
+  )
+) +
+  geom_col(
+    position = "stack",
+    alpha = 1,
+    color = 'black',
+    linewidth = 0.2,
+    na.rm = TRUE
+  ) +
+  #geom_text(aes(label = gene), position = position_stack(vjust = .5), size=3) +
+  geom_vline(xintercept = 0, size = 1) +
+  xlab("# of Changed Genes") +
+  ylab("Conditions") +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    panel.border = element_rect(fill="transparent", linewidth=0.75)
+  ) +
+  scale_fill_manual(
+    values = fold_cat_colors,
+    name = "Fold Change",
+    breaks = c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")
+  ) +
+  facet_grid(
+    group ~ .,
+    space = "free_y",
+    scales = "free_y",
+    switch = "y",
+    drop = TRUE
+  )
+
+p <- ggplotly(g)
+
+highlight(g, on = "plotly_click",
+        off = "plotly_doubleclick",
+        opacityDim = 0.3,
+        selected = attrs_selected(showlegend = FALSE))
 ```

@@ -85,7 +85,8 @@ ui <- fluidPage(tweaks,
                             ),
                             tags$span("By Gene")
                           )
-                        ),),
+                        )),
+                        fluidRow(column(width = 9, uiOutput("groupBy"))),
                         width = 3),
                       mainPanel(fluidRow(withSpinner(
                         plotlyOutput("tilePlot", height = "60vh")
