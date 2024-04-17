@@ -81,6 +81,14 @@ function(input, output, session) {
   output$tilePlot <- renderPlotly({
     if (!input$button) {
       add_facet <- !is.null(input$groupID) && input$groupID != ''
+      
+      if (add_facet) {
+        unique_groups = unique(res()[, input$groupID])
+        if (length(unique_groups) > 5) {
+          show_alert("cannot plot more than 5 groups",type = "error", duration = 5)
+          add_facet = FALSE
+        }
+      }
       # 1 block in bottom chunks
       p <- ggplotly(
         ggplot(
@@ -119,20 +127,17 @@ function(input, output, session) {
           {if (add_facet) theme(panel.border = element_rect(fill="transparent", linewidth=1))}
         ,
         tooltip = "text",
-        #width = cdata$output_pid_width,
-        #height = cdata$output_pid_height
+        width = cdata$output_pid_width,
+        height = cdata$output_pid_height
       ) %>% config(displayModeBar = FALSE)
 
       if (add_facet) {
-        total_size = nrow(res_levels())
-        group_sizes <- (res_levels() %>% group_by(group) %>% summarise(n = n() / total_size))$n
-        group_end <- c(rev(cumsum(group_sizes)), 0)
+        group_sizes <- (res_levels() %>% group_by(!!sym(input$groupID)) %>% summarise(n = n_distinct(condition)))$n
+        total_size <- sum(group_sizes)
+        group_end <- c(rev(cumsum(group_sizes / total_size)), 0)
         num_groups = length(group_sizes)
-
-        if (num_groups > 5) {
-          showNotification("cannot plot more than 5 groups",type = "error", duration = 5)
-          return()
-        }
+        print(group_sizes)
+        
         if (num_groups >= 2){
           p$x$layout$yaxis$domain <- c(group_end[2], group_end[1])
           p$x$layout$yaxis2$domain <- c(group_end[3], group_end[2])
@@ -148,7 +153,6 @@ function(input, output, session) {
         }
         
         lapply(3:(2 + num_groups), function(i){
-          print(p$x$layout$annotations[[i]]$text)
           p$x$layout$annotations[[i]]$y <<- (group_end[i - 1] + group_end[i - 2])/2
         })
         
@@ -159,9 +163,6 @@ function(input, output, session) {
         })
         
         lapply(seq(1, 2 * num_groups - 1, 2), function(i){
-          print(i)
-          print(group_end[i/2 + 1])
-          print(group_end[i/2])
           p$x$layout$shapes[[i]]$y0 <<- group_end[(i + 1)/2 + 1] + margin_size
           p$x$layout$shapes[[i]]$y1 <<- group_end[(i + 1)/2] - margin_size
         })
