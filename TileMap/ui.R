@@ -36,9 +36,9 @@ ui <- fluidPage(tweaks,
                   "TileMap",
                   theme = shinytheme("journal"),
                   tabPanel(
-                    "Data",
+                    "TileMap",
                     fluid = TRUE,
-                    icon = icon("database"),
+                    icon = icon("boxes-stacked"),
                     tags$style(button_color_css),
                     # Sidebar layout with a input and output definitions
                     sidebarLayout(
@@ -49,7 +49,7 @@ ui <- fluidPage(tweaks,
                           inputId = "dataset",
                           label = "Choose Dataset",
                           choices = datasets,
-                          selected = datasets[3],
+                          selected = "Jorstad",
                           width = "220px"
                         ),
                         fluidRow(column(
@@ -79,13 +79,21 @@ ui <- fluidPage(tweaks,
                           width = 9,
                           tags$div(
                             materialSwitch(
-                              inputId = "button",
+                              inputId = "plotByButton",
                               label = "By Condition",
                               inline = TRUE
                             ),
                             tags$span("By Gene")
                           )
                         )),
+                        fluidRow(column(
+                          width = 6,
+                          materialSwitch(inputId = "plotOutline",
+                                         label = "Remove Outline?")
+                        ),
+                        column(width = 4,
+                               materialSwitch(inputId = "plotText",
+                                              label = "Text?"))), 
                         fluidRow(column(width = 9, uiOutput("groupBy"))),
                         width = 3),
                       mainPanel(fluidRow(withSpinner(
@@ -98,7 +106,22 @@ ui <- fluidPage(tweaks,
                       , width = 9)
                     )
                   ),
-                  
+                  tabPanel(
+                    "Heatmap",
+                    icon = icon("grip-vertical"),
+                    sidebarLayout(
+                      sidebarPanel(
+                        titlePanel("Data Selection"),
+                        # Select Event
+                        selectInput(
+                          inputId = "HeatmapDataset",
+                          label = "Choose Dataset",
+                          choices = datasets,
+                          selected = "Jorstad",
+                          width = "220px"
+                        ), width = 3),
+                    mainPanel(fluidRow(plotOutput("heatmapPlot", height = "95vh")), width = 9))
+                  ),
                   tabPanel(
                     "About",
                     icon = icon("info-circle"),

@@ -1,7 +1,6 @@
 library(shiny)
 library(tidyverse)
 library(tibble)
-library(superheat)
 library(plotly)
 library(forcats)
 library(DT)
@@ -78,154 +77,161 @@ function(input, output, session) {
   
   cdata <- session$clientData
   
+  
   output$tilePlot <- renderPlotly({
-    if (!input$button) {
-      add_facet <- !is.null(input$groupID) && input$groupID != ''
-      
-      if (add_facet) {
-        unique_groups = unique(res()[, input$groupID])
-        if (length(unique_groups) > 5) {
-          show_alert("cannot plot more than 5 groups",type = "error", duration = 5)
-          add_facet = FALSE
-        }
+    add_facet <- !is.null(input$groupID) && input$groupID != ''
+    
+    if (add_facet) {
+      unique_groups = unique(res()[, input$groupID])
+      if (length(unique_groups) > 5) {
+        show_alert("cannot plot more than 5 groups",
+                   type = "error",
+                   duration = 5)
+        add_facet = FALSE
       }
-      # 1 block in bottom chunks
-      p <- ggplotly(
-        ggplot(
-          data = highlight_key(res_levels(), ~ gene),
-          aes(
-            y = fct_reorder(condition, val, .na_rm = TRUE),
-            x = val,
-            fill = fold_cat,
-            text = gene
-          )
-        ) +
-          geom_col(
-            position = "stack",
-            alpha = 1,
-            color = 'black',
-            linewidth = 0.2,
-            na.rm = TRUE
-          ) +
-          #geom_text(aes(label = gene), position = position_stack(vjust = .5), size=3) +
-          geom_vline(xintercept = 0, size = 1) +
-          xlab("# of Changed Genes") +
-          ylab("Conditions") +
-          theme(
-            panel.grid.major = element_blank(),
-            panel.grid.minor = element_blank(),
-            panel.background = element_blank(),
-            strip.background = element_rect(fill="#EFEFEF", color = "black",linewidth = 1),
-            strip.text = element_text(size = 10)
-          ) +
-          scale_fill_manual(
-            values = fold_cat_colors,
-            name = "Fold Change",
-            breaks = c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")
-          ) + 
-          {if (add_facet) facet_grid(~get(input$groupID) ~ ., space="free_y", scales = "free_y", switch="y", drop=TRUE)} +
-          {if (add_facet) theme(panel.border = element_rect(fill="transparent", linewidth=1))}
-        ,
-        tooltip = "text",
-        width = cdata$output_pid_width,
-        height = cdata$output_pid_height
-      ) %>% config(displayModeBar = FALSE)
-
-      if (add_facet) {
-        group_sizes <- (res_levels() %>% group_by(!!sym(input$groupID)) %>% summarise(n = n_distinct(condition)))$n
-        total_size <- sum(group_sizes)
-        group_end <- c(rev(cumsum(group_sizes / total_size)), 0)
-        num_groups = length(group_sizes)
-        print(group_sizes)
-        
-        if (num_groups >= 2){
-          p$x$layout$yaxis$domain <- c(group_end[2], group_end[1])
-          p$x$layout$yaxis2$domain <- c(group_end[3], group_end[2])
-        }
-        if (num_groups >= 3){
-          p$x$layout$yaxis3$domain <- c(group_end[4], group_end[3])
-        }
-        if (num_groups >= 4){
-          p$x$layout$yaxis4$domain <- c(group_end[5], group_end[4])
-        }
-        if (num_groups == 5){
-          p$x$layout$yaxis5$domain <- c(group_end[6], group_end[5])
-        }
-        
-        lapply(3:(2 + num_groups), function(i){
-          p$x$layout$annotations[[i]]$y <<- (group_end[i - 1] + group_end[i - 2])/2
-        })
-        
-        margin_size <- 0.003
-        lapply(seq(2, 2 * num_groups, 2), function(i){
-          p$x$layout$shapes[[i]]$y0 <<- group_end[i/2 + 1] + margin_size
-          p$x$layout$shapes[[i]]$y1 <<- group_end[i/2] - margin_size
-        })
-        
-        lapply(seq(1, 2 * num_groups - 1, 2), function(i){
-          p$x$layout$shapes[[i]]$y0 <<- group_end[(i + 1)/2 + 1] + margin_size
-          p$x$layout$shapes[[i]]$y1 <<- group_end[(i + 1)/2] - margin_size
-        })
-      }
-      
-      
-      highlight(
-        p,
-        on = "plotly_click",
-        off = "plotly_doubleclick",
-        opacityDim = 0.3,
-        selected = attrs_selected(showlegend = FALSE)
-      )
+    }
+    
+    if (!input$plotByButton) {
+      plotBy <- "condition"
+      valCol <- "gene"
     } else {
-      highlight(
-        ggplotly(
-          ggplot(
-            data = highlight_key(res_levels(), ~ condition),
-            aes(
-              x = fct_reorder(gene, val, .na_rm = TRUE),
-              y = val,
-              fill = fold_cat,
-              text = condition
+      plotBy <- "gene"
+      valCol <- "condition"
+    }
+    
+    outlineWidth <- if (input$plotOutline) 0 else 0.2
+    
+    p <- ggplotly(
+      ggplot(
+        data = highlight_key(res_levels(), ~ get(valCol)),
+        aes(
+          y = fct_reorder(get(plotBy), val, .na_rm = TRUE),
+          x = val,
+          fill = fold_cat,
+          text = gene
+        )
+      ) +
+        geom_col(
+          position = "stack",
+          alpha = 1,
+          color = 'black',
+          linewidth = outlineWidth,
+          na.rm = TRUE
+        ) +
+        geom_vline(xintercept = 0, size = 1) +
+        xlab("# Changed") +
+        ylab(plotBy) +
+        theme(
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          strip.background = element_rect(
+            fill = "#EFEFEF",
+            color = "black",
+            linewidth = 1
+          ),
+          strip.text = element_text(size = 10)
+        ) +
+        scale_fill_manual(
+          values = fold_cat_colors,
+          name = "Fold Change",
+          breaks = c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")
+        ) +
+        {
+          if (add_facet)
+            facet_grid(
+              ~ get(input$groupID) ~ .,
+              space = "free_y",
+              scales = "free_y",
+              switch = "y",
+              drop = TRUE
             )
-          ) +
-            facet_grid(. ~ genegroup, scales = "free", space = "free") +
-            geom_col(
-              position = "stack",
-              alpha = 1,
-              color = 'black',
-              linewidth = 0.2,
-              na.rm = TRUE
-            ) +
-            geom_hline(yintercept = 0, size = 1) +
-            xlab("Genes") +
-            ylab("# of Changed Conditions") +
-            theme(
-              panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank(),
-              panel.background = element_blank(),
-              axis.text.x = element_text(
-                angle = 90,
-                vjust = 0.5,
-                hjust = 1
-              ),
-              legend.position = 'none'
-            ) +
-            scale_fill_manual(
-              values = fold_cat_colors,
-              name = "Fold Change",
-              breaks = c("-2", "-1.5", "-0.75", "-0.25", "0.25", "0.75", "1.5", "2")
-            ),
-          tooltip = "text",
-          width = cdata$output_pid_width,
-          height = cdata$output_pid_height
-        ) %>% config(displayModeBar = FALSE),
-        on = "plotly_click",
-        off = "plotly_doubleclick",
-        opacityDim = 0.3,
-        selected = attrs_selected(showlegend = FALSE)
-      )
+        } +
+        {
+          if (add_facet)
+            theme(panel.border = element_rect(fill = "transparent", linewidth = 1))
+        } + 
+        {
+          if (input$plotText) geom_text(aes(label = get(valCol)), position = position_stack(vjust = .5), size=2)
+        }
+      ,
+      tooltip = "text",
+      width = cdata$output_pid_width,
+      height = cdata$output_pid_height
+    ) %>% config(displayModeBar = FALSE)
+    
+    if (add_facet) {
+      group_sizes <-
+        rev((res_levels() %>% group_by(!!sym(input$groupID)) %>% summarise(n = n_distinct(get(plotBy))))$n)
+      total_size <- sum(group_sizes)
+      group_end <- c(rev(cumsum(group_sizes / total_size)), 0)
+      num_groups = length(group_sizes)
+      #print(group_sizes)
+      
+      if (num_groups >= 2) {
+        p$x$layout$yaxis$domain <- c(group_end[2], group_end[1])
+        p$x$layout$yaxis2$domain <- c(group_end[3], group_end[2])
+      }
+      if (num_groups >= 3) {
+        p$x$layout$yaxis3$domain <- c(group_end[4], group_end[3])
+      }
+      if (num_groups >= 4) {
+        p$x$layout$yaxis4$domain <- c(group_end[5], group_end[4])
+      }
+      if (num_groups == 5) {
+        p$x$layout$yaxis5$domain <- c(group_end[6], group_end[5])
+      }
+      
+      lapply(3:(2 + num_groups), function(i) {
+        p$x$layout$annotations[[i]]$y <<-
+          (group_end[i - 1] + group_end[i - 2]) / 2
+      })
+      
+      margin_size <- 0.003
+      lapply(seq(2, 2 * num_groups, 2), function(i) {
+        p$x$layout$shapes[[i]]$y0 <<- group_end[i / 2 + 1] + margin_size
+        p$x$layout$shapes[[i]]$y1 <<- group_end[i / 2] - margin_size
+      })
+      
+      lapply(seq(1, 2 * num_groups - 1, 2), function(i) {
+        p$x$layout$shapes[[i]]$y0 <<- group_end[(i + 1) / 2 + 1] + margin_size
+        p$x$layout$shapes[[i]]$y1 <<-
+          group_end[(i + 1) / 2] - margin_size
+      })
+    }
+    
+    
+    highlight(
+      p,
+      on = "plotly_click",
+      off = "plotly_doubleclick",
+      opacityDim = 0.3,
+      selected = attrs_selected(showlegend = FALSE)
+    )
+  })
+  
+  
+  fileNameHeatmap <- reactive({
+    input$HeatmapDataset
+  })
+  resHeatMap <- reactive({
+    if (!is.null(fileNameHeatmap)) {
+      read.csv(paste0("datasets/", fileNameHeatmap(), ".csv"))
     }
   })
+  
+  output$heatmapPlot <- renderPlot(
+    ggplot(resHeatMap(),
+           aes(condition, gene, fill=fold)) 
+    + geom_raster(color = "black",
+                lwd = 1,
+                linetype = 1) 
+    + scale_fill_gradientn(colors = fold_cat_colors, na.value = 'white') 
+    + theme(
+      axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5), 
+      axis.text.y = element_text(angle = 30),
+            panel.background = element_blank())
+    )
   
   
   allChoices <- reactive(sort(unique(res()$condition)))
@@ -279,7 +285,7 @@ function(input, output, session) {
       inputId = "groupID",
       label = "Group By:",
       choices = groupChoices,
-      selected = "group"
+      selected = ""
     )
   })
   

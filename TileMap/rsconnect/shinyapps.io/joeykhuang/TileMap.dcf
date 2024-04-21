@@ -1,0 +1,12 @@
+name: TileMap
+title: TileMap
+username: joeykhuang
+account: joeykhuang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11816883
+bundleId: 8519531
+url: https://joeykhuang.shinyapps.io/TileMap/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
