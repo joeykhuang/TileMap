@@ -26,11 +26,20 @@ function(input, output, session) {
                                       if (class(input$filterCondID) %in% c("character", "logical")) {
                                         res_ %>% filter(!!rlang::sym(input$filterID) %in% input$filterCondID)
                                       } else if (class(input$filterCondID) == "numeric") {
-                                        res_ %>% filter(between(
-                                          !!rlang::sym(input$filterID),
-                                          input$filterCondID[1],
-                                          input$filterCondID[2]
-                                        ))
+                                        if (input$filterID == "pvalue") {
+                                          print("hi");
+                                          res_ %>% filter(between(
+                                            !!rlang::sym(input$filterID),
+                                            0,
+                                            input$filterCondID[1]
+                                          ))
+                                        } else {
+                                          res_ %>% filter(between(
+                                            !!rlang::sym(input$filterID),
+                                            input$filterCondID[1],
+                                            input$filterCondID[2]
+                                          ))
+                                        }
                                       }
                                       
                                     } else {
@@ -108,7 +117,7 @@ function(input, output, session) {
           y = fct_reorder(get(plotBy), val, .na_rm = TRUE),
           x = val,
           fill = fold_cat,
-          text = gene
+          text = paste0(gene, "\n", fold)
         )
       ) +
         geom_col(
@@ -223,9 +232,7 @@ function(input, output, session) {
   output$heatmapPlot <- renderPlot(
     ggplot(resHeatMap(),
            aes(condition, gene, fill=fold)) 
-    + geom_raster(color = "black",
-                lwd = 1,
-                linetype = 1) 
+    + geom_raster() 
     + scale_fill_gradientn(colors = fold_cat_colors, na.value = 'white') 
     + theme(
       axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5), 
@@ -315,6 +322,16 @@ function(input, output, session) {
           max = maxChoice,
           value = c(minChoice, maxChoice)
         )
+        if (filterBy == "pvalue") {
+          minChoice <- floor(min(filterCondChoices) * 10) / 10
+          maxChoice <- ceiling(max(filterCondChoices) * 10) / 10
+          sliderTextInput(
+            "filterCondID",
+            "Range:",
+            choices = c(0, 0.0001, 0.001, 0.01, 0.1, 1, 10),
+            grid = T
+          )
+        }
       }
     }
   })
