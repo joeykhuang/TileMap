@@ -110,11 +110,24 @@ function(input, output, session) {
     
     outlineWidth <- if (input$plotOutline) 0 else 0.2
     
+    sortBy <- input$sortBy
+    
+    if (sortBy == "Total Changed") {
+      print("Total Changed is sorting function");
+      sortFun <- function (x) sum(abs(x))
+    } else if (sortBy == "Upregulated") {
+      sortFun <- function (x) sum(x > 0)
+    } else if (sortBy == "Downregulated") {
+      sortFun <- function (x) sum(x < 0)
+    } else {
+      sortFun <- function (x) 0
+    }
+    
     p <- ggplotly(
       ggplot(
         data = highlight_key(res_levels(), ~ get(valCol)),
         aes(
-          y = fct_reorder(get(plotBy), val, .na_rm = TRUE),
+          y = fct_reorder(get(plotBy), val, .fun = sortFun, .na_rm = TRUE),
           x = val,
           fill = fold_cat,
           text = paste0(gene, "\n", fold)
@@ -209,12 +222,14 @@ function(input, output, session) {
       })
     }
     
+    highlightedValues <- input$search
     
     highlight(
       p,
       on = "plotly_click",
       off = "plotly_doubleclick",
       opacityDim = 0.3,
+      defaultValues = highlightedValues,
       selected = attrs_selected(showlegend = FALSE)
     )
   })
@@ -294,6 +309,20 @@ function(input, output, session) {
       choices = groupChoices,
       selected = ""
     )
+  })
+  
+  output$searchBar <- renderUI({
+    if (!input$plotByButton) {
+      valCol <- "gene"
+    } else {
+      valCol <- "condition"
+    }
+    selectizeInput(inputId = "search",
+                   choices = unique(res_selected()[, valCol]),
+                   selected = NULL,
+                   multiple = TRUE,
+                   label = "Search",
+                   options = list(placeholder = 'e.g. TP53, TNF', create = TRUE))
   })
   
   output$filterConds <- renderUI({

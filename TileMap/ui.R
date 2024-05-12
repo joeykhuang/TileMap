@@ -96,7 +96,15 @@ ui <- fluidPage(tweaks,
                                               label = "Text?"))), 
                         fluidRow(column(width = 9, uiOutput("groupBy"))),
                         width = 3),
-                      mainPanel(fluidRow(withSpinner(
+                      
+                      # Right panel
+                      mainPanel(
+                      fluidRow(column(width = 3, selectInput(inputId = "sortBy", 
+                                           label = "Sort By:", 
+                                           choices = c("Name", "Upregulated", "Downregulated", "Total Changed"), 
+                                           selected = "Tota Changed")), 
+                               column(width = 9, uiOutput("searchBar"))),
+                      fluidRow(withSpinner(
                         plotlyOutput("tilePlot", height = "60vh")
                       )),
                       hr(),
